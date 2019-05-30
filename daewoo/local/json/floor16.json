@@ -1,0 +1,58 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>경영관리단</span><span>단장 이병인</span>",
+    	},
+    	{
+    		"dept" : "<span>인사경영지원본부</span><span>상무 진재기</span><span>상무보 박석훈</span>",
+    	},
+        {
+            "dept" : "<span>글로벌지원팀</span><span>커뮤니케이션팀</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>인사경영지원본부</span><span>상무 박상훈</span>",
+    	},
+    	{
+    		"dept" : "<span>상무보 강기남</span><span>상무보 지국일</span>",
+    	},
+    	{
+    		"dept" : "<span>총무팀</span><span>인사팀</span><span>인재육성팀</span>",
+    	},
+    	{
+    		"dept" : "<span>현장관리지원TFT</span>",
+    	}
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

@@ -1,0 +1,55 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>주택건축사업본부</span><span>상무 권혁건</span><span>상무 조석민</span><span>상무보 강주석</span><span>상무보 유영삼</span>",
+    	},
+    	{
+    		"dept" : "<span>해외건축사업1팀</span><span>해외건축사업2팀</span>",
+    	},
+        {
+            "dept" : "<span>수주견적팀</span><span>예산견적팀</span><span>프리콘TFT</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>주택건축사업본부</span><span>전무 백정완</span>",
+    	},
+        {
+            "dept" : "<span>상무 정영수</span><span>상무 이경구</span><span>상무 김중회</span><span>상무보 김선근</span><span>상무보 이항녕</span><span>상무보 오성규</span><span>상무보 권오길</span><span>상무보 김진형</span>",
+        },
+        {
+            "dept" : "<span>주택건축기획팀</span><span>주택건축CM1팀</span><span>주택건축CM2팀</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

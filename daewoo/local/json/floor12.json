@@ -1,0 +1,58 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>커뮤니케이션 센터</span><span>대회의실</span><span>강의실</span><span>화상회의실 1~4</span>",
+        },
+        {
+            "dept" : "<span>TF룸</span>",
+        },
+        {
+            "dept" : "<span>현장준비반</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>커뮤니케이션 센터</span><span>대회의실</span><span>Lounge</span><span>Cafe</span>",
+    	},
+        {
+            "dept" : "<span>의무실</span><span>心CARE CENTER</span>",
+        },
+        {
+            "dept" : "<span>건설기술정보센터</span>",
+        },
+        {
+            "dept" : "<span>여직원휴게실</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

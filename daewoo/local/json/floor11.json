@@ -1,0 +1,55 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>토목사업본부</span><span>전무 김형섭</span>",
+        },
+        {
+            "dept" : "<span>상무 박찬용</span><span>상무보 김제춘</span>",
+        },
+        {
+            "dept" : "<span>토목기획팀</span><span>토목기술팀</span><span>국내토목CM팀</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>토목사업본부</span>",
+    	},
+        {
+            "dept" : "<span>상무 장승규</span><span>상무보 정태성</span><span>상무보 김용해</span><span>상무보 강석도</span>",
+        },
+        {
+            "dept" : "<span>해외토목사업1팀</span><span>해외토목사업2팀</span><span>해외토목CM팀</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

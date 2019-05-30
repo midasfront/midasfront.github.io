@@ -1,0 +1,33 @@
+﻿callback({
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

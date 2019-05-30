@@ -1,0 +1,52 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>인사경영지원본부</span><span>상무보 이용권</span>",
+    	},
+    	{
+    		"dept" : "<span>IT기획팀</span><span>IT운영팀</span>",
+    	},
+        {
+            "dept" : "<span>PC수리실</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>주택건축사업본부</span><span>상무보 안상태</span><span>상무보 김용</span><span>상무보 윤주송</span>",
+    	},
+    	{
+    		"dept" : "<span>주택건축설계팀</span><span>상품개발팀</span><span>주택건축기술팀</span><span>주택건축기계팀</span><span>주택건축전기팀</span>",
+    	}
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

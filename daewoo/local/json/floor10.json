@@ -1,0 +1,52 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>품질안전실</span><span>상무 이호진</span>",
+        },
+        {
+            "dept" : "<span>상무보 이광채</span><span>상무보 김용선</span>",
+        },
+        {
+            "dept" : "<span>국내HSE팀</span><span>해외HSE팀</span><span>품질경영팀</span><span>품질기술팀</span><span>CLEAR TFT</span>",
+        }
+	],
+	"rightData":[
+        {
+            "dept" : "<span>토목사업본부</span><span>상무 김태영</span><span>상무보 윤익수</span><span>상무보 김토문</span><span>상무보 강민구</span>",
+        },
+        {
+            "dept" : "<span>토목사업팀</span><span>토목개발팀</span><span>토목환경사업팀</span><span>토목견적팀</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

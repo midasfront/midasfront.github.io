@@ -1,0 +1,46 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>인사경영지원본부</span><span>홍보팀</span><span>기자실</span><span>재무관리본부</span>",
+        },
+        {
+            "dept" : "<span>IR Room</span><span>회계수감실</span>",
+        }
+	],
+	"rightData":[        
+        {
+            "dept" : "<span></span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

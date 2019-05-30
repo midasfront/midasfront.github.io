@@ -1,0 +1,52 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>플랜트사업본부</span><span>쿠웨이트 AL-ZOUR-<br><span> REFINERY PJ</span><span>남제주복합화력 주기기 PJ</span><span>A1E PJ</span><span>모로코SAFI발전 PJ</span><span>리비아즈위티나발전PJ</span>",
+        },
+        {
+            "dept" : "<span>울산 S-OIL RUC PJ</span><span>플랜트사업TFT</span>",
+        },
+        {
+            "dept" : "<span>인사경영지원본부</span><span>비상계획팀</span><span>예비군대대</span>",
+        },
+        {
+            "dept" : "<span>기술연구원장실</span>",
+        }
+	],
+	"rightData":[        
+        {
+            "dept" : "<span>플랜트사업본부</span><span>현장준비반</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

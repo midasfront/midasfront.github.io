@@ -1,0 +1,52 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>플랜트사업본부</span><span>상무 김광호</span>",
+        },
+        {
+            "dept" : "<span>상무 조순범</span><span>상무 최일영</span><span>상무보 장재우</span><span>상무보 홍민표</span>",
+        },
+        {
+            "dept" : "<span>플랜트기획팀</span><span>플랜트사업1팀</span><span>플랜트사업2팀</span><span>LNG사업TFT</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : " <span>플랜트사업본부</span><span>상무보 허윤종</span><span>상무보 최해영</span>",
+    	},
+        {
+            "dept" : "<span>플랜트견적1팀</span><span>플랜트견적2팀</span><span>플랜트입찰TFT</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

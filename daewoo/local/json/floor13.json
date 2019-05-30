@@ -1,0 +1,52 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>주택건축사업본부</span><span>상무 곽은상</span><span>상무보 전윤영</span><span>상무보 최영욱</span>",
+    	},
+    	{
+    		"dept" : "<span>도시정비사업1팀</span><span>도시정비사업2팀</span><span>도시정비사업3팀</span>",
+    	},
+        {
+            "dept" : "<span>마케팅팀</span><span>영업관리팀</span>",
+        }
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>주택건축사업본부</span><span>상무 곽병영</span><span>상무보 박희석</span>",
+    	},
+        {
+            "dept" : "<span>주택건축사업1팀</span><span>주택건축사업2팀</span><span>주택건축사업3팀</span><span>개발사업1팀</span><span>개발사업2팀</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

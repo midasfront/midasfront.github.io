@@ -1,0 +1,61 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>전략기획본부</span><span>상무 서정철</span><span>상무보 양성민</span>",
+    	},
+    	{
+    		"dept" : "<span>공공업무팀</span><span>북방사업지원팀</span><span>CR팀</span>",
+    	},
+    	{
+    		"dept" : "<span>해외영업관리팀</span><span>해외마케팅팀</span>",
+    	}
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>기업가치제고본부</span><span>상무 임판섭</span><span>상무 홍순범</span><span>상무보 박도선</span>",
+    	},
+    	{
+    		"dept" : "<span>기업가치제고기획팀</span><span>기업가치제고1팀</span><span>기업가치제고2팀</span>",
+    	},
+        {
+            "dept" : "<span>해외PJ심의팀</span><span>국내PJ심의팀</span>",
+        },
+        {
+            "dept" : "<span>감사실</span><span>상무 오광석</span>",
+        },
+        {
+            "dept" : "<span>기획진단팀</span><span>직무진단팀</span><span>컴플라이언스팀</span>",
+        }	
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

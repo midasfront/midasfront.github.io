@@ -1,0 +1,55 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>재무관리본부</span><span>상무보 이용희</span><span>상무보 박성문</span>",
+    	},
+    	{
+    		"dept" : "<span>회계팀</span><span>세무팀</span><span>내부회계관리팀</span><span>국제금융팀</span><span>자금팀</span>",
+    	}
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>CFO</span><span>전무 김창환</span>",
+    	},
+    	{
+    		"dept" : "<span>재무관리본부</span><span>전무 조인환</span>",
+    	},
+    	{
+    		"dept" : "<span>상무 최종일</span><span>상무보 김낭규</span><span>상무보 김대식</span><span>상무보 정호명</span>",
+    	},
+    	{
+    		"dept" : "<span>IR팀</span><span>경영관리팀</span><span>예산관리팀</span><span>자산관리팀</span>",
+    	}	
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

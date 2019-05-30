@@ -1,0 +1,49 @@
+﻿callback({
+	"leftData":[
+		{
+            "dept" : "<span>플랜트사업본부</span><span>상무 김재호</span><span>전문위원 임윤호</span><span>상무보 심재구</span>",
+        },
+        {
+            "dept" : "<span>플랜트PM1팀</span><span>플랜트PM2팀</span><span>플랜트CM팀</span><span>원자력사업팀</span>",
+        }        
+	],
+	"rightData":[
+        {
+            "dept" : "<span>플랜트사업본부</span><span>전문위원 손홍걸</span>",
+        },
+        {
+            "dept" : "<span>시운전팀</span><span>토건설계팀</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

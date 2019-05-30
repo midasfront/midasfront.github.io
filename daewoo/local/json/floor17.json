@@ -1,0 +1,58 @@
+﻿callback({
+	"leftData":[
+		{
+        	"dept" : "<span>조달본부</span><span>상무보 홍상범</span><span>상무보 이승표</span><span>상무보 임효선</span>",
+    	},
+    	{
+    		"dept" : "<span>플랜트구매1팀</span><span>플랜트구매2팀</span><span>플랜트구매3팀</span><span>자재물류관리팀</span>",
+    	}
+	],
+	"rightData":[
+        {
+        	"dept" : "<span>조달본부</span><span>상무 김성환</span>",
+    	},
+    	{
+    		"dept" : "<span>상무 윤우규</span><span>상무보 진행원</span>",
+    	},
+    	{
+    		"dept" : "<span>상생기획팀</span><span>국내외주1팀</span><span>국내외주2팀</span><span>해외외주팀</span><span>건설기계팀</span>",
+    	},
+    	{
+    		"dept" : "<span>일반구매1팀</span><span>일반구매2팀</span>",
+    	},
+        {
+            "dept" : "<span>직원노사협의회</span>",
+        }
+	],
+	"centerData":[
+        {
+        	"url" : "intro", "time" : "5000"
+    	},
+    	{
+        	"url" : "vision", "time" : "5000"
+    	},
+    	{
+        	"url" : "news_1", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_2", "time" : "2000"
+    	},
+    	{
+        	"url" : "news_3", "time" : "2000"
+    	},
+    	{
+        	"url" : "incom_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "incom_2", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_1", "time" : "5000"
+    	},
+    	{
+        	"url" : "message_2", "time" : "5000"
+    	}
+	]
+});
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>대우 인터넷이 안될때</title>
+<meta http-equiv="refresh" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, width=device-width" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/common_skt.js"></script>
+<script src="js/slick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//setInterval(schedule, 300000); // 5min
+	setInterval(todyaDate, 60000);//10min 새로고침	60000=1분
+//	setInterval(fnTodayWeather, 300000);//5min 새로고침	60000=1분
+	//setInterval(fnYesterdayWeather, 600000);//10min 새로고침 60000=1분
+	$.ajaxSetup({ cache: false });
+
+	//schedule();
+	//fnTodayWeather_cookie();
+	//fnYesterdayWeather();
+	todyaDate();
+});
+</script>
+
+</head>
+
+<body>
+	<div id="wrap">		
+		<div class="left_sec">
+			<div class="floor_data">
+				<dl>
+					<dt class="data-floor"><em>20</em>F</dt>
+					<dd>
+						<ul class="data-left-sec"></ul>
+					</dd>
+				</dl>
+			</div>			
+		</div>
+		<div class="contents">
+			<div class="top_sec">
+				<div class="container" id="lay_out">
+					<div class="left_date">
+						<span class="date">2019. 5. 14. <strong>화요일</strong></span> 
+						<span class="time"><em>PM</em> 04:34</span> 
+					</div>
+					<div class="weather_con">
+						<!-- <div class="now_weather" id="now_today"></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="body_sec">
+				<div class="slide_con">
+					<ul class="c_slide"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="right_sec">
+			<div class="floor_data">
+				<dl>
+					<dt class="data-floor"><em>20</em>F</dt>
+					<dd>
+						<ul class="data-right-sec"></ul>
+					</dd>
+				</dl>
+			</div>				
+		</div>	
+	</div>
+
+	<script>    
+        $(function(){	        
+
+        	// ajax
+	    	$.ajax({
+	    		url:"json/floor20.json",
+	    		method:"GET",
+	    		dataType:"jsonp",
+            	jsonpCallback:"callback",
+	    		success:function(result){
+
+	    		    var resLData = result.leftData;
+	    		    var resRData = result.rightData;
+	    		    var resCData = result.centerData;
+
+	    		    $(resLData).each(function(i){
+                        var $leftUl = $('ul.data-left-sec');                    	
+                        $leftLi = $("<li>").html(resLData[i].dept);
+                        $leftUl.append($leftLi);                       
+	                });
+
+	                $(resRData).each(function(j){
+                        var $rightUl = $('ul.data-right-sec');                    	
+                        $rightLi = $("<li>").html(resRData[j].dept);
+                        $rightUl.append($rightLi);                       
+	                });	    		   	
+
+	                $(resCData).each(function(v){
+	                	var $centerUl = $('ul.c_slide');           
+                        $centerLi = $("<li data-time='"+ resCData[v].time +"'>").html("<img src='img/center/"+resCData[v].url+".jpg'>");
+                        $centerUl.append($centerLi);
+	                });
+
+	                var $slide = $('.c_slide');
+	                $slide.slick({                                  
+		                infinite: true,
+		                autoplay: true,
+		                fade: true,                
+		                arrows:false,
+		                draggable :true,
+		                autoplaySpeed: 5000,
+		                speed: 600,
+		                dots: false,
+		                focusOnSelect: false,
+		                responsive:false               
+		            }).on("afterChange", function(e, slick) {
+				        slideTime = $('div[data-slick-index="'+ slick.currentSlide + '"]').find("li").data("time");			        
+				        $slide.slick("setOption", "autoplaySpeed", slideTime);
+				    });
+	    		},
+	    		error:function(xhr, status, error){
+	    			console.log(xhr);
+	    		}
+	    	});	
+
+          	chkScreen();
+        }); 
+		
+		var chkScreen = function(){
+            var winW = $(window).width();  
+            var targetW = winW-($(".left_sec").width())-($(".right_sec").width())
+            var slideCon = $(".slide_con");
+            slideCon.css('width',targetW);
+        };
+
+    	$(window).resize(chkScreen);
+
+    </script>
+
+</body>
+</html>
