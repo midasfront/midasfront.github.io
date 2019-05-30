@@ -1,7 +1,7 @@
 ﻿callback({
 	"leftData":[
 		{
-        	"dept" : "<span>주택건축사업본부</span><span>상무 곽은상</span><span>상무보 전윤영</span><span>상무보 최영욱</span>",
+        	"dept" : "<span>주택건축사업본부</span><span>상무 곽은상</span><span>상무보 전윤영</span><span>상무보 최영욱</span><span>상무보 박용하</span>",
     	},
     	{
     		"dept" : "<span>도시정비사업1팀</span><span>도시정비사업2팀</span><span>도시정비사업3팀</span>",
@@ -12,7 +12,7 @@
 	],
 	"rightData":[
         {
-        	"dept" : "<span>주택건축사업본부</span><span>상무 곽병영</span><span>상무보 박희석</span>",
+        	"dept" : "<span>주택건축사업본부</span><span>상무 곽병영</span><span>상무보 박희석</span><span>상무보 조학연</span>",
     	},
         {
             "dept" : "<span>주택건축사업1팀</span><span>주택건축사업2팀</span><span>주택건축사업3팀</span><span>개발사업1팀</span><span>개발사업2팀</span>",
