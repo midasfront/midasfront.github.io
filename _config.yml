@@ -49,3 +49,5 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
+google_fonts: "Noto+Sans+KR:100,300,400,500,700"
