@@ -5,7 +5,7 @@ baseurl: "/"
 url: "http://midasfront.github.io"
 description: > # this means to ignore newlines until "show_exerpts:"
  description.
-
+google_fonts: "Noto+Sans+KR:100,300,400,500,700"
 show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -50,4 +50,3 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
 
-google_fonts: "Noto+Sans+KR:100,300,400,500,700"
