@@ -1,8 +1,9 @@
 ---
 layout: page
 title:  "[Git] Git 명령어 정리"
-categories: doc
+permalink: /doc/
 ---
+
 <br/>
 
 # <img src="https://git-scm.com/images/logo@2x.png">
