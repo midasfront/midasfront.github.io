@@ -156,7 +156,7 @@ input[type="checkbox"], input[type="radio"] { color: #666;  border:none; vertica
 }
 
 
-body {background: #000;}
+body {background: #13122c;}
 
 * {box-sizing: border-box;}
 .wrap{position:relative;  overflow: hidden; min-width:1200px; width:100%; min-height:1080px; background-color: #fff;}
@@ -259,6 +259,7 @@ header .top_nav .lang li:first-child:before {
 	background: #3d7ea9;
 	position: absolute;		
 }
+.right_nav {position: absolute; right: 0; top: 25px;}
 
 .index_wrap{/*position:relative; width:1200px; z-index: 10; margin: 0 auto;*/}    
 

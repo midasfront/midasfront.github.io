@@ -29,13 +29,13 @@
 			<span class="register"><img src="resources/img/left_b.png" alt=""></span>
 			<span class="con_logo"><img src="resources/img/b_con_logo.png" alt=""></span>
 			<div class="main_visual" id="scrollbar">				
-				<div class="imgcon">
+				<div class="imgcon m_obj_1">
 					<img src="resources/img/b_content_21.png" alt="">
 				</div>
-				<div class="imgcon">
+				<div class="imgcon m_obj_2">
 					<img src="resources/img/b_content_22.png" alt="">
 				</div>
-				<div class="footer">
+				<div class="footer m_obj_3">
 					<img src="resources/img/footer.png" alt="">
 				</div>
 			</div>
@@ -55,28 +55,46 @@
 	</div>
 	<!-- //wrap -->
 
-</body>
-<script>	
-	(function (ns) {
+	<script type="text/javascript">		
+		function designScroll(){
+            var $el = $("#scrollbar");
+            $el.mCustomScrollbar('destroy');
+            $el.mCustomScrollbar({                                
+                scrollEasing: "easeInOut",
+                alwaysShowScrollbar: 0,
+                autoExpandScrollbar: true,
+                mouseWheel: {
+                    scrollAmount: 400,
+                    normalizeDelta: true
+                },
+                callbacks:{
+			        onScroll:function(){
+			            myCustomFn(this);
+			        }
+			    }
+            });
+        }
+
+        function myCustomFn(el){
+        	var sTop = 0; 
+            function scroll(){
+                var wH = $(window).height();
+                var wTop = el.mcs.top;			
+                sTop = Math.abs(wTop);  
+                oTop = $(".imgcon").offset().top;
+                console.log(sTop, oTop)      
+            };
+            scroll();
+		}
+
+
 		$(function(){	
-
-			var designScroll = function(){
-	            var $el = $("#scrollbar");
-	            $el.mCustomScrollbar('destroy');
-	            $el.mCustomScrollbar({                                
-	                scrollEasing: "easeInOut",
-	                alwaysShowScrollbar: 0,
-	                autoExpandScrollbar: true,
-	                mouseWheel: {
-	                    scrollAmount: 400,
-	                    normalizeDelta: true
-	                }
-	            });
-	        }
-	        designScroll();
-
+			
+	        designScroll();	       
 			//ns.main.init(); 
-		});
-	})(APP || {});	
+		});		
+
 </script>
+
+</body>
 </html>
