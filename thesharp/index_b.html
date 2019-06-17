@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>남천동 더샵</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css">
+	<script src="resources/js/libs/jquery.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="resources/js/libs/greensock/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="resources/js/libs/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="resources/js/libs/slick.js" type="text/javascript" charset="utf-8"></script>
+	<script src="resources/js/main.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript" src="resources/js/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="resources/js/libs/jquery.mousewheel.min.js"></script>
+	<link rel="stylesheet" href="resources/css/jquery.mCustomScrollbar.css" />
+
+	<!--[if lt IE 9]>
+	    <script src="js/libs/html5shiv.js"></script>        
+	<![endif]--> 
+</head>
+<body>
+	
+	<div id="wrap">
+		<div class="main_container">
+			<span class="logo"><img src="resources/img/logo_b.png" alt=""></span>
+			<span class="gnb"><img src="resources/img/gnb_b.png" alt=""></span>
+			<span class="brand"><img src="resources/img/brand_b.png" alt=""></span>
+			<span class="register"><img src="resources/img/left_b.png" alt=""></span>
+			<span class="con_logo"><img src="resources/img/b_con_logo.png" alt=""></span>
+			<div class="main_visual" id="scrollbar">				
+				<div class="imgcon">
+					<img src="resources/img/b_content_21.png" alt="">
+				</div>
+				<div class="imgcon">
+					<img src="resources/img/b_content_22.png" alt="">
+				</div>
+				<div class="footer">
+					<img src="resources/img/footer.png" alt="">
+				</div>
+			</div>
+
+			<div class="vimeo-wrapper">
+			   <iframe src="https://player.vimeo.com/video/342660008?quality=1080p&background=1&autoplay=1&loop=1&byline=0&title=0"
+			           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+
+			<!-- <div class="movie_con">
+                <video muted autoplay loop>
+                    <source src="resources/img/video_1.mp4" type="video/mp4">
+                </video>
+            </div> -->
+		</div>
+		<!-- //main_container -->
+	</div>
+	<!-- //wrap -->
+
+</body>
+<script>	
+	(function (ns) {
+		$(function(){	
+
+			var designScroll = function(){
+	            var $el = $("#scrollbar");
+	            $el.mCustomScrollbar('destroy');
+	            $el.mCustomScrollbar({                                
+	                scrollEasing: "easeInOut",
+	                alwaysShowScrollbar: 0,
+	                autoExpandScrollbar: true,
+	                mouseWheel: {
+	                    scrollAmount: 400,
+	                    normalizeDelta: true
+	                }
+	            });
+	        }
+	        designScroll();
+
+			//ns.main.init(); 
+		});
+	})(APP || {});	
+</script>
+</html>
