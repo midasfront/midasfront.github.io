@@ -28,8 +28,9 @@
 			<span class="brand"><img src="resources/img/brand_b.png" alt=""></span>
 			<span class="register"><img src="resources/img/left_b.png" alt=""></span>
 			<span class="con_logo"><img src="resources/img/b_con_logo.png" alt=""></span>
-			<div class="main_visual" id="scrollbar">				
+			<div class="main_visual" id="scrollbar">					
 				<div class="imgcon m_obj_1">
+					<p class="top_pop"><a href="javascript:;"><img src="resources/img/con_b_top.jpg" alt=""></a></p>
 					<img src="resources/img/con_b.jpg" alt="">
 				</div>
 				<!-- <div class="imgcon m_obj_2">
@@ -89,7 +90,12 @@
 
 
 		$(function(){	
-			
+			var pop = $(".top_pop");
+			$(".top_pop>a").click(function(e){
+                e.preventDefault();
+                TweenMax.to(pop, 0.4, {css:{'marginTop':"-130px"}, ease:Cubic.easeOut});
+            });
+
 	        designScroll();	       
 			//ns.main.init(); 
 		});		
