@@ -21,12 +21,12 @@ APP.register = function(ns_name){
 (function(ns, $,undefined){    
     ns.register('main');        
     ns.main = function(){
-         var leady = true, tNum = 0, totalNum = 3, menuCon, menuBg, tl, contents, overTimer;
+         var leady = true, tNum = 0, totalNum = 4, menuCon, menuBg, tl, contents, overTimer;
         var  visualWrap, visualCon, visualImg, visualTopWrap, visualBottomWrap, visualTopCon, visualBottomCon, imgWid = 1920, imgHei = 1080, controllBt, reSetTimer, slideimg;
         var _init = function(){
             var index0;
             loadImg();           
-            totalNum = 3;
+            totalNum = 4;
             menuCon = $('.menu_con .menu').find('li>a');
             menuCon.on('mouseenter focusin mouseleave focusout click', menuHandler);
             menuBg = $('.menu_con .menu_bg ul').find('li');
@@ -102,7 +102,7 @@ APP.register = function(ns_name){
             changeMenuBg(num);
         };
         var changeMenuBg = function(num){
-            for(var i=0; i < 3; i++){
+            for(var i=0; i < 4; i++){
                 if(num == i){
                    
                    TweenMax.to($(menuBg[num]), 0.3, {opacity:1, ease:Cubic.easeOut});
@@ -114,7 +114,7 @@ APP.register = function(ns_name){
             };
         };
         var menuOver = function(num){
-            for(var i=0; i < 3; i++){
+            for(var i=0; i < 4; i++){
                 if(num == i){
                     $(menuCon[num]).addClass('on')
                 }else{

@@ -202,13 +202,12 @@ body {background: #13122c;}
   min-height: 100%;  
 }
 .main_container .main_visual .imgcon {
-    padding-left: 80px;
-    text-align: left;
-    margin-top: 150px;
+    padding-left: 0;
+    text-align: left;   
     background: #fff;
 }
 .main_container .main_visual .imgcon img {}
-.main_container .footer { background: #f3f4f7; padding:50px 80px; margin-top: 100px;}
+.main_container .footer { background: #f3f4f7; padding:50px 80px; margin-top: 20px; text-align: left;}
 
 
 /*.vimeo-wrapper {
