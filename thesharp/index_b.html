@@ -31,7 +31,7 @@
 			<div class="main_visual" id="scrollbar">					
 				<div class="imgcon m_obj_1">
 					<p class="top_pop"><a href="javascript:;"><img src="resources/img/con_b_top.jpg" alt=""></a></p>
-					<img src="resources/img/con_b.jpg" alt="">
+					<a href="sub_b.html"><img src="resources/img/con_b.jpg" alt=""></a>
 				</div>
 				<!-- <div class="imgcon m_obj_2">
 					<img src="resources/img/b_content_22.png" alt="">
@@ -52,7 +52,7 @@
                 </video>
             </div> -->
 		</div>
-		
+
 		<!-- //main_container -->
 	</div>
 	<!-- //wrap -->
@@ -79,12 +79,21 @@
 
         function myCustomFn(el){
         	var sTop = 0; 
+            
             function scroll(){
-                var wH = $(window).height();
+            	var $scrollerOuter  = $('.mCustomScrollbar');
+			    var $dragger        = $scrollerOuter.find( '.mCSB_dragger' );
+			    var scrollHeight    = $scrollerOuter.find( '.mCSB_container' ).height();
+			    var draggerTop      = $dragger.position().top;
+			    var scrollTop = draggerTop / ($scrollerOuter.height() - $dragger.height()) * (scrollHeight - $scrollerOuter.height());
+
                 var wTop = el.mcs.top;			
                 sTop = Math.abs(wTop);  
-                oTop = $(".imgcon").offset().top;
-                console.log(sTop, oTop)      
+                oTop = Math.abs($(".imgcon").offset().top)  
+                scTop = Math.ceil(scrollTop);
+                //calcTop = (scrollTop + wH/2)+250;
+
+                console.log(sTop, draggerTop, scTop)      
             };
             scroll();
 		}
