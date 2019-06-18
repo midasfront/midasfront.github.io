@@ -233,7 +233,7 @@ body {background: #13122c;}
    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
    position: absolute;
    top: 50%;
-   left: 50%;
+   left: 20%;
    transform: translate(-50%, -50%);
 }
 
