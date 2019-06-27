@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(NanumMyeongjo-Regular.eot);
+  src: url(NanumMyeongjo-Regular.eot?#iefix) format('embedded-opentype'),
+       url(NanumMyeongjo-Regular.woff2) format('woff2'),
+       url(NanumMyeongjo-Regular.woff) format('woff'),
+       url(NanumMyeongjo-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(NanumMyeongjo-Bold.eot);
+  src: url(NanumMyeongjo-Bold.eot?#iefix) format('embedded-opentype'),
+       url(NanumMyeongjo-Bold.woff2) format('woff2'),
+       url(NanumMyeongjo-Bold.woff) format('woff'),
+       url(NanumMyeongjo-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo ExBold';
+  font-style: normal;
+  font-weight: 800;
+  src: url(NanumMyeongjo-ExtraBold.eot);
+  src: url(NanumMyeongjo-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(NanumMyeongjo-ExtraBold.woff2) format('woff2'),
+       url(NanumMyeongjo-ExtraBold.woff) format('woff'),
+       url(NanumMyeongjo-ExtraBold.ttf) format('truetype');
+}
