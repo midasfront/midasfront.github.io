@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-language" content="ko">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no,target-densitydpi=medium-dpi">
+	<meta name="robots" content="all" />
+	<title>반도문화재단</title>
+	<meta name="author" content="반도문화재단" />
+	<meta name="title" content="반도문화재단" />
+	<meta name="Description" content="반도문화재단">
+	<meta name="Keywords" content="반도문화재단">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="반도문화재단">
+	<meta property="og:description" content="반도문화재단">
+	<meta property="og:url" content="https://www.bando.com">
+	<meta property="og:image" content="/bando/resources/img/og_img.png">
+	<link rel="shortcut icon" href="/bando/resources/img/common/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="/bando/resources/css/style.css">
+	<script type="text/javascript" src="/bando/resources/js/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/bando/resources/js/libs/modernizr.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/jquery/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/greensock/easing/EasePack.min.js"></script>    
+    <script type="text/javascript" src="/bando/resources/js/libs/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/jquery/slick.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/app.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="header" role="header">
+			<div class="header_con">
+				<h1><a href="/"><img src="/bando/resources/img/common/top_logo.png" alt="lvy Lounge"></a></h1>
+				<nav id="gnb" class="gnb">
+					<ul class="gnb_depth_1">
+						<li><a href="/bando/pages/exhibition/exhibition.html"><strong>전시<em></em>프로그램</strong></a>
+							<!-- <ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/exhibition/1">1</a></li>
+	                    		<li><a href="/bando/pages/exhibition/2">2</a></li>
+	                            <li><a href="/bando/pages/exhibition/3">3</a></li>
+	                            <li><a href="/bando/pages/exhibition/4">4</a></li>
+	                    	</ul> -->
+						</li>
+						<li><a href="/bando/pages/library/library_intro.html"><strong>도서관</strong></a>
+							<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/library/library_intro.html">도서관 소개</a></li>
+	                    		<li><a href="/bando/pages/library/book_manage.html">도서 관리</a></li>
+	                    	</ul>
+	                    </li>										
+	          			<li><a href="/bando/pages/nanum/nanum_info.html"><strong>문화나눔</strong></a>
+	          				<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/nanum/nanum_info.html">나눔사업소개</a></li>
+	                    	</ul>
+	          			</li>
+	          			<li><a href="/bando/pages/story/story.html"><strong>스토리</strong></a>
+	          				<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/story/story.html">스토리</a></li>
+	                    	</ul>
+	          			</li>
+	          			<li><a href="/bando/pages/cs/story.html"><strong>이용안내</strong></a>
+	          				<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/cs/notice.html">공지사항</a></li>
+	                    		<li><a href="/bando/pages/cs/calendar.html">행사캘린더</a></li>
+	                    		<li><a href="/bando/pages/cs/sales_info.html">이용/대관안내</a></li>
+	                    		<li><a href="/bando/pages/cs/space_intro.html">공간소개</a></li>
+	                    		<li><a href="/bando/pages/cs/location.html">찾아오시는길</a></li>                    		
+	                    	</ul>
+	          			</li>					
+					</ul>
+				</nav>
+
+				<div class="top_link_sec">
+					<ul class="top_sns">
+						<li><a href="#"><i class="icosns top_sns_1"></i></a></li>
+						<li><a href="#"><i class="icosns top_sns_2"></i></a></li>
+						<li><a href="#"><i class="icosns top_sns_3"></i></a></li>
+					</ul>
+					<a href="#">반도문화재단</a>
+				</div>
+			</div>
+		</header>
+
+		<div id="container">
+			
+			<section class="layout_top">
+				<div class="top_visual">
+					<h2 id="title"></h2>	
+				</div>		
+
+				<div class="top_loc_con">		
+					<div class="location_nav">
+						<a href="index.html" class="home">홈</a>
+						<dl class="path-item path_depth_1">
+							<dt>
+								<span></span>
+								<button type="button" class="btn-open">열기</button>
+							</dt>
+							<dd>
+								<ul>
+								</ul>
+								<button type="button" class="btn-close">닫기</button>
+							</dd>
+						</dl>
+						<dl class="path-item path_depth_2">
+							<dt>
+								<span></span>
+								<button type="button" class="btn-open">열기</button>
+							 </dt>
+							<dd>
+								<ul>
+								</ul>
+								<button type="button" class="btn-close">닫기</button>
+							</dd>
+						</dl>
+
+						<ul class="sns_list">
+							<li><a href="#"><i class="icosns nav_sns_1"></i>Facebook</a></li>					
+							<li><a href="#"><i class="icosns nav_sns_2"></i>Daum</a></li>					
+							<li><a href="#"><i class="icosns nav_sns_3"></i>Blog</a></li>		
+							<li><a href="#"><i class="icosns nav_sns_4"></i>Mail</a></li>
+							<li><a href="#"><i class="icosns nav_sns_5"></i>Print</a></li>
+							<li><a href="#"><i class="icosns nav_sns_6"></i>Clipboard</a></li>
+						</ul>
+
+					</div>
+					<!-- //location_nav -->
+					
+							
+
+				</div>	
+				<!-- //top_loc_con -->
+
+			</section>
+
+			<section class="layout_body">
+				<div class="grid_box nanum">
+					<div class="pg_container">
+						<h3>문화나눔<p class="tit_summary">반도문화재단이 당신의 문화가 있는 삶을 응원합니다. </p></h3>
+						
+						<div class="numum_con cont_left">                                               			                
+			                <div class="contxt">			                   
+			                    <dl>
+			                        <dt>복지시설 아트 인테리어 지원</dt>
+			                        <dd>복지시설 이용자들의 정서적 안정과 미술감상의 기회를 제공하기 위해, 선정된 시설에 미술작품을 설치해 드립니다.</dd>
+			                    </dl>
+			                </div>                
+			                <div class="comimg"><img src="/bando/resources/img/sub/nanum_thumb_1.jpg" alt=""></div>
+			            </div>
+			            <!-- //numum_con -->
+
+			            <div class="numum_con cont_right">                                               
+			                <div class="comimg"><img src="/bando/resources/img/sub/nanum_thumb_2.jpg" alt=""></div>
+			                <div class="contxt">			                   
+			                    <dl>
+			                        <dt>문화 &middot; 복지  &middot; 체육 단체/개인 후원</dt>
+			                        <dd>문화  &middot; 복지  &middot; 체육 단체 등의 사업과 경제적으로 어려운 예술인과 체육인, 소외계층을 돕습니다.</dd>
+			                    </dl>
+			                </div>                
+			            </div>
+			            <!-- //numum_con -->
+
+			            <div class="numum_con cont_left">                                               			                
+			                <div class="contxt">			                   
+			                    <dl>
+			                        <dt>문화공간 지원</dt>
+			                        <dd>문화예술 동아리, 지역주민 등에게 갤러리, 무대, 모임공간 (다목적실, 도서관 홀)과 음향 &middot; 교육 장비를 홍보와 함께 무료로 지원(대관)합니다.</dd>
+			                    </dl>
+			                </div>  
+			                <div class="comimg"><img src="/bando/resources/img/sub/nanum_thumb_3.jpg" alt=""></div>              
+			            </div>
+			            <!-- //numum_con -->
+
+			            <div class="numum_con cont_right">                                               
+			                <div class="comimg"><img src="/bando/resources/img/sub/nanum_thumb_4.jpg" alt=""></div>
+			                <div class="contxt">			                   
+			                    <dl>
+			                        <dt>문화캠페인</dt>
+			                        <dd>당신의 문화가 있는 삶을 위해, 재미있고 유익한 문화생활 캠페인과 이벤트를 진행합니다.</dd>
+			                    </dl>
+			                </div>                
+			            </div>
+			            <!-- //numum_con -->
+
+					</div>
+					<!-- //pg_container -->
+				</div>
+				<!-- //grid_box -->
+			</section>
+			<!-- //layout_body -->
+		</div>
+		<!-- //container -->
+
+
+		<footer id="footer" role="footer">
+		    <div class="footer_con">
+		    	<div class="inner">
+			        <ul class="footer_link">
+			            <li><a href="/etc/privacy">개인정보처리방침</a></li>
+			            <li><a href="/etc/rules">법적고지</a></li>
+			        </ul> 
+
+			        <ul class="footer_sns">
+			            <li><a href="#"><i class="icosns top_sns_1"></i>Blog</a></li>
+			            <li><a href="#"><i class="icosns top_sns_2"></i>Facebook</a></li>
+			            <li><a href="#"><i class="icosns top_sns_3"></i>Instagram</a></li>
+			        </ul>
+
+			        <div class="familysite" id="Fnfamily">	           
+		                <a href="javascript:;">FAMILY SITE</a>
+		                <div>
+		                    <ul class="list">
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                    </ul>
+		                </div>
+			        </div>
+			        <!-- //familysite -->  	              
+			    </div>
+			    <!-- //inner -->
+			</div>
+		    <!-- //footer_con -->
+		    <div class="address_con"> 
+		    	<div class="inner">
+				    <address>
+				           <p class="txt_addr">
+				           		<span>반도문화재단 (12345) 경기도 화성시 동탄광역환승로 73</span>
+				           		<span>Tel : 031-2019-0521  |  개인정보관리책임자 : 최동민</span>
+				           	</p>
+				            <p class="txt_copyright">Copyright ⓒ 2019 by Bando Foundation for Art & Culture. All right reserved.</p>
+				    </address>
+				</div>
+				<!-- //inner -->
+		    </div>
+		    <!-- //address_con -->
+		</footer>
+		<!-- //footer -->
+
+
+			
+	</div>
+	<!-- //wrap -->
+
+	<script type="text/javascript">
+		(function (ns) {
+            $(function(){               
+               //ns.includeHTML.init();
+
+               ns.gnb_hor.init();
+               ns.chkScreen.init();
+               ns.Numbering.init();               
+               ns.selectUpBox($('#Fnfamily'));  
+            });
+         })(APP || {});
+	</script>
+
+
+</body>
+</html>

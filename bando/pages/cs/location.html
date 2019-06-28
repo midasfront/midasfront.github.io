@@ -126,7 +126,7 @@
 							<li><a href="#"><i class="icosns nav_sns_5"></i>Print</a></li>
 							<li><a href="#"><i class="icosns nav_sns_6"></i>Clipboard</a></li>
 						</ul>
-					
+
 					</div>
 					<!-- //location_nav -->
 					
@@ -138,99 +138,72 @@
 			</section>
 
 			<section class="layout_body">
-				<div class="grid_box library">
+				<div class="grid_box location_map">
 					<div class="pg_container">
-						<h3>도서관/이용안내</h3>
-						<div class="library_con">
 
-							<div class="library_gal">
+						<ul class="tab_boxtype tablist_5">
+						    <li><a href="/bando/pages/cs/notice.html">공지사항</a></li>
+                    		<li><a href="/bando/pages/cs/calendar.html">행사캘린더</a></li>
+                    		<li><a href="/bando/pages/cs/sales_info.html">이용/대관안내</a></li>
+                    		<li><a href="/bando/pages/cs/space_intro.html">공간소개</a></li>
+                    		<li class="on"><a href="/bando/pages/cs/location.html">오시는길</a></li>
+						</ul>
 
-								<div class="gal_view" id="slider-for">                        
-                           			<div class="slide_view">
-	                            		<img src="../../resources/img/sub/lib_view.jpg" alt="" />
-		                            </div>
-		                            <div class="slide_view">
-	                            		<img src="../../resources/img/sub/lib_view.jpg" alt="" />
-		                            </div>
-		                            <div class="slide_view">
-	                            		<img src="../../resources/img/sub/lib_view.jpg" alt="" />
-		                            </div>
-		                            <div class="slide_view">
-	                            		<img src="../../resources/img/sub/lib_view.jpg" alt="" />
-		                            </div>
-		                            <div class="slide_view">
-	                            		<img src="../../resources/img/sub/lib_view.jpg" alt="" />
-		                            </div>
-		                        </div>
-
-
-								<div class="gal_thumb">
-	                        		<ul id="slider-nav">                            
-		                                <li>
-		                                    <a href="javascript:;">
-		                                       <img src="../../resources/img/sub/lib_thumb.jpg" alt="">
-		                                    </a>
-		                                </li>
-		                                <li>
-		                                    <a href="javascript:;">
-		                                       <img src="../../resources/img/sub/lib_thumb.jpg" alt="">
-		                                    </a>
-		                                </li>
-		                                <li>
-		                                    <a href="javascript:;">
-		                                       <img src="../../resources/img/sub/lib_thumb.jpg" alt="">
-		                                    </a>
-		                                </li>
-		                                <li>
-		                                    <a href="javascript:;">
-		                                       <img src="../../resources/img/sub/lib_thumb.jpg" alt="">
-		                                    </a>
-		                                </li>
-		                                <li>
-		                                    <a href="javascript:;">
-		                                       <img src="../../resources/img/sub/lib_thumb.jpg" alt="">
-		                                    </a>
-		                                </li>
-		                            </ul>
-	                        	</div>
-							</div>
-							<!-- //library_gal -->
-
-							<div class="library_txt">								
-								<dl>
-									<dt class="bg_tit f_my"><span><strong>Ivy Lounge 도서관</strong>은 <strong>당신을 위한 열린 독서&middot;문화 공간</strong>입니다.</span></dt>
-									<dd>
-										일반도서는 물론 문화예술과 인문, 가족&middot;아동 도서를 특화하여 구비하고 있으며, 주제별 추천도서(큐레이션)
-서가운영을 통해 온 가족이 문화예술과 인문학 등을 가까이서 누릴 수 있도록 돕습니다.<br />
-누구나 자유롭게 도서 열람.대출과 공간 이용이 가능하며, 지역주민의 소통과 문화활동을 위해 모임공간과
-무대, 음향.교육 장비도 무료로 지원합니다.
-									</dd>
-								</dl>
-
-								<div class="library_guide">
-									<p class="tit">[ 도서관 이용안내 ]</p>
-									<ul class="bl_dot">
-										<li>도서검색 등은 아래의 ‘도서관 사이트’ 에서 가능합니다.</li>
-										<li>도서대출은 ‘도서관 사이트’ 회원가입 후 이용할 수 있습니다.(회원가입 내방신청 가능)</li>
-										<li>1인당 대출도서는 일반도서 5권, 유&middot;아동 도서는 10권입니다.</li>
-										<li>대출기간은 7일이며 1회에 한해 7일간 대출기간을 연장할 수 있습니다.</li>
-										<li>도서반납 기한일이 휴관일인 경우 다음 개관일로 자동 연장됩니다.</li>
-										<li>도서반납 지연 시, 지연 일수만큼 대출이 제한됩니다(최대 30일).</li>
-										<li>대출 중 분실되거나 현저히 훼손된 도서는 대출자가 변상합니다. </li>
-									</ul>
-								</div>
-								<!-- //library_guide -->
-
-							</div>
-
+						<h3>오시는 길</h3>
+						
+						<div class="location_map">
 							
+							<div class="mapview" id="map"></div>
 
-							<div class="button_group txt-cnt">
-								<a href="#" class="btn btn_arrow btn_bg_arrow">도서관 바로가기</a>
-								<a href="#" class="btn btn_arrow btn_line_arrow">이용 / 대관안내</a>
+							<div class="mapcon_box">
+								<div class="left_sec">
+									<dl>
+										<dt><strong>18479  경기도 화성시 동탄광역환승로 73, 제207동 제이262호</strong>(오산동, 동탄역반도유보라아이비파크 8.0) </dt>
+										<dd><strong>지번주소 _</strong> 경기도 화성시 오산동 967-1251 동탄역반도유보라아이비파크8.0 제207동 제이262호 </dd>
+									</dl>
+								</div>
+								<div class="right_sec">
+									<a href="#" class="btn btn_arrow btn_bg_arrow">네이버 지도<br />자세히 보기</a>
+								</div>								
 							</div>
+
+							<div class="mapguide">
+								<ul>
+									<li>
+										<dl>
+											<dt><i class="icomap ico_map_subway"></i>지하철</dt>
+											<dd>
+												<p>1호선 병점역, 서동탄역, 세마역 하차 후 택시 20분 내외</p>
+												<p>1호선 병점역 하차 후 버스 (일반) 5-1, (마을) 17 환승 (45분 내외)</p>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt><i class="icomap ico_map_bus"></i>버스</dt>
+											<dd>
+												<p>(일반) 5-1, 51, 71   (직행) 1560   (마을) 17 → ‘반도 6차’ 또는 ‘업무복합부지’ 정류장 하차 후 도보 5～10분</p>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt><i class="icomap ico_map_train"></i>철도</dt>
+											<dd>
+												<p>SRT 동탄역 하차 후 택시 10분 내외 (*횡단보도가 멀어 도보 이용 시 40분 내외 소요)</p>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+								<p class="foot_summary">※ 주차장이 협소하므로 대중교통을 이용해 주시기 바랍니다.</p>
+							<div>
+
+														
 						</div>
-						<!-- //library_con -->
+						<!-- //location_map -->
+						
+
+
 					</div>
 					<!-- //pg_container -->
 				</div>
@@ -241,51 +214,51 @@
 		<!-- //container -->
 
 
-<footer id="footer" role="footer">
-    <div class="footer_con">
-    	<div class="inner">
-	        <ul class="footer_link">
-	            <li><a href="/etc/privacy">개인정보처리방침</a></li>
-	            <li><a href="/etc/rules">법적고지</a></li>
-	        </ul> 
+		<footer id="footer" role="footer">
+		    <div class="footer_con">
+		    	<div class="inner">
+			        <ul class="footer_link">
+			            <li><a href="/etc/privacy">개인정보처리방침</a></li>
+			            <li><a href="/etc/rules">법적고지</a></li>
+			        </ul> 
 
-	        <ul class="footer_sns">
-	            <li><a href="#"><i class="icosns top_sns_1"></i>Blog</a></li>
-	            <li><a href="#"><i class="icosns top_sns_2"></i>Facebook</a></li>
-	            <li><a href="#"><i class="icosns top_sns_3"></i>Instagram</a></li>
-	        </ul>
+			        <ul class="footer_sns">
+			            <li><a href="#"><i class="icosns top_sns_1"></i>Blog</a></li>
+			            <li><a href="#"><i class="icosns top_sns_2"></i>Facebook</a></li>
+			            <li><a href="#"><i class="icosns top_sns_3"></i>Instagram</a></li>
+			        </ul>
 
-	        <div class="familysite" id="Fnfamily">	           
-                <a href="javascript:;">FAMILY SITE</a>
-                <div>
-                    <ul class="list">
-                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
-                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
-                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
-                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
-                    </ul>
-                </div>
-	        </div>
-	        <!-- //familysite -->  	              
-	    </div>
-	    <!-- //inner -->
-	</div>
-    <!-- //footer_con -->
-    <div class="address_con"> 
-    	<div class="inner">
-		    <address>
-		           <p class="txt_addr">
-		           		<span>반도문화재단 (12345) 경기도 화성시 동탄광역환승로 73</span>
-		           		<span>Tel : 031-2019-0521  |  개인정보관리책임자 : 최동민</span>
-		           	</p>
-		            <p class="txt_copyright">Copyright ⓒ 2019 by Bando Foundation for Art & Culture. All right reserved.</p>
-		    </address>
-		</div>
-		<!-- //inner -->
-    </div>
-    <!-- //address_con -->
-</footer>
-<!-- //footer -->
+			        <div class="familysite" id="Fnfamily">	           
+		                <a href="javascript:;">FAMILY SITE</a>
+		                <div>
+		                    <ul class="list">
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                    </ul>
+		                </div>
+			        </div>
+			        <!-- //familysite -->  	              
+			    </div>
+			    <!-- //inner -->
+			</div>
+		    <!-- //footer_con -->
+		    <div class="address_con"> 
+		    	<div class="inner">
+				    <address>
+				           <p class="txt_addr">
+				           		<span>반도문화재단 (12345) 경기도 화성시 동탄광역환승로 73</span>
+				           		<span>Tel : 031-2019-0521  |  개인정보관리책임자 : 최동민</span>
+				           	</p>
+				            <p class="txt_copyright">Copyright ⓒ 2019 by Bando Foundation for Art & Culture. All right reserved.</p>
+				    </address>
+				</div>
+				<!-- //inner -->
+		    </div>
+		    <!-- //address_con -->
+		</footer>
+		<!-- //footer -->
 
 
 			
@@ -299,8 +272,7 @@
 
                ns.gnb_hor.init();
                ns.chkScreen.init();
-               ns.Numbering.init();
-               ns.libraryGal.init();
+               ns.Numbering.init();               
                ns.selectUpBox($('#Fnfamily'));  
             });
          })(APP || {});

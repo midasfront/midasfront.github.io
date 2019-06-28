@@ -249,10 +249,30 @@ ul.thumnail_list>li .thumnail_box .txt {font-size:16px;line-height:1.4;}
 .btn_line_arrow::after {background: #000;}
 .btn_line_arrow::before {background: #000;}
 
+.layout_body .grid_box h3 {font-size: 1.8rem; text-align: center; padding-bottom: 1rem; font-family: 'Noto Sans Medium'; color: #555555;}
+.layout_body .grid_box h3 .tit_summary {font-size: 0.95rem; padding-top: 0.8rem; font-family: 'Noto Sans';}
+
+
+.icomap {    
+    position: relative;
+    display: inline-block;
+}
+.icomap:after { 
+    content: "";
+    display: inline-block;
+    background: url(../img/common/page_icon.png) no-repeat;  
+    width:62px; 
+    height:62px;
+    vertical-align: middle;
+}
+.icomap.ico_map_subway:after {background-position: 0 -55px;}
+.icomap.ico_map_bus:after {background-position: -65px -55px;}
+.icomap.ico_map_train:after {background-position: -130px -55px;}
+
+
+
 /* 도서관 안내 
 *******************/
-
-.layout_body .grid_box h3 {font-size: 1.8rem; text-align: center; padding-bottom: 1rem; font-family: 'Noto Sans Medium';}
 .library {color: #222222;}
 .library_con {}
 .library_con .library_txt {padding: 0 4rem;}
@@ -298,7 +318,7 @@ ul.thumnail_list>li .thumnail_box .txt {font-size:16px;line-height:1.4;}
 .gal_thumb {text-align: center;}
 .gal_thumb > ul {display: inline-block;}
 .gal_thumb > ul li {padding: 6px;}
-.gal_thumb > ul li a {position: relative; display: block;}
+.gal_thumb > ul li a {position: relative; display: block; width: 148px;} /* local 에서 가로값 인식 안되서 임시삽입 */
 .gal_thumb a::before {
   content: "";
   left: 0;
@@ -318,6 +338,58 @@ ul.thumnail_list>li .thumnail_box .txt {font-size:16px;line-height:1.4;}
 }
   
 .library_con .button_group {padding: 3rem 0;}
+
+
+/* 문화나눔 
+*********************/
+.numum_con {display: table; width: 100%; padding: 1.8rem 0;}
+.numum_con .comimg {display: table-cell; width: 50%; vertical-align: top;}
+.numum_con .comimg img {max-width: 100%;}
+.numum_con dl {}
+.numum_con dl dt {font-size: 1.4rem; color: #222222; padding: 1rem 1.2rem; font-family: 'Nanum Myeongjo Bold';  border-bottom: 1px solid #000; letter-spacing: -2px;}
+.numum_con dl dt strong {  
+  color: #8c1e01; 
+  text-transform: uppercase;    
+  font-family: 'Noto Sans Medium';
+}
+.numum_con dl dd {font-size: 0.85rem; color: #222; padding: 1rem 1.2rem; line-height: 1.8;}
+.numum_con dl dd.hashtxt { color: #777777; font-size: 16px;}
+.numum_con .contxt {display: table-cell; width: 50%; vertical-align: middle;}
+.numum_con.cont_left .contxt {text-align: right;}
+.numum_con.cont_right .contxt {text-align: left;}
+
+
+/* 오시는 길 
+*********************/
+.location_map {}
+.location_map .mapview {height: 442px; margin-top: 2rem; background: #efefef;}
+.location_map .mapcon_box {
+  margin: 3rem 0; 
+  border-top: 3px solid #b5b6b6; 
+  border-bottom: 1px solid #b5b6b6; 
+  padding: 2rem 0;
+  display: table; 
+  width: 100%;
+}
+.location_map .mapcon_box .left_sec {display: table-cell; vertical-align: middle; padding-right: 2rem;}
+.location_map .mapcon_box .right_sec {display: table-cell; min-width: 220px; vertical-align: bottom; text-align: right;}
+
+.location_map .mapcon_box dl {}
+.location_map .mapcon_box dl dt {font-size: 1.1rem; color: #555; font-family: 'Noto Sans Medium';}
+.location_map .mapcon_box dl dt strong {display: block; font-size: 1.2rem;}
+.location_map .mapcon_box dl dd {font-size: 0.9rem; padding-top: 0.5rem;}
+.location_map .mapcon_box dl dd strong {}
+
+.location_map .mapcon_box .right_sec a.btn_bg_arrow {width: 100%; text-align: left;}
+.location_map .mapguide {}
+.location_map .mapguide ul {}
+.location_map .mapguide ul li {background: #f4f4f4; border-bottom: 1px solid #fff;}
+.location_map .mapguide ul li dl {display: table; width: 100%; table-layout: fixed;}
+.location_map .mapguide ul li dl dt {display: table-cell; font-size: 1rem; text-align: left; width: 210px; vertical-align: middle; padding: 0.7rem 2rem; font-family: 'Noto Sans Medium';}
+.location_map .mapguide ul li dl dt i {display: inline-block; margin-right: 1.5rem; vertical-align: middle;}
+.location_map .mapguide ul li dl dd {display: table-cell; vertical-align: middle;}
+.location_map .mapguide ul li dl dd p {font-size: 0.85rem;}
+.location_map .foot_summary {font-size: 0.85rem; padding: 1rem 0;}
 
 
 

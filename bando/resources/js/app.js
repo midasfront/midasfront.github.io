@@ -265,19 +265,16 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
             var $titleH2 = $("#title");
 
             titleName = $depth2Target.find(">a").text();
-            
-
 
             if (num1 != undefined) {
                 $depth1Target.addClass("on");   
                 $depth2Target.addClass("on");   
-                //$(".layout_visual").attr("id", "subVis_"+num1);
-                
+                $(".layout_top").find(">.top_visual").attr("id", "subvis-"+num1);  
+
                 _makeLocation(num1, num2)
-                //_linkLocation(num1, num2) //로케이션 링크 활성화
 
                 if (titleName != undefined ) $titleH2.text(titleName);
-                if (num2 == undefined ) $titleH2.text($depth1Target.find(">a").text()); //depth2가 없을때
+                if (num2 == undefined ) $titleH2.text($depth1Target.find(">a").text());
             }
 
             //title 세팅
@@ -302,10 +299,9 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
 
         var _makeLocation = function (num1, num2) {
             
-            var depth1Txt = $(".gnb_depth_1>li.on").find(">a").text();
-            $(".location_nav").find(".current").text(depth1Txt);
-
-            var $lnb = $("#cloneLnb");
+            var $location = $(".location_nav");
+            var $locDepth1 = $location.find(".path_depth_1"),
+                $locDepth2 = $location.find(".path_depth_2");
             var html = "", html2;
 
             $gnb.find(".gnb_depth_1>li").each(function () {
@@ -313,18 +309,31 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
                 html += $(this).find(">a")[0].outerHTML;
                 html += "</li>";
             });
-            //html2 = $gnb.find(".gnb_depth_1>li").eq(num1).find(".gnb_depth_2>li").clone();
-            html2 = $gnb.find(".gnb_depth_1").clone();
-            $lnb.html(html2);
-            $lnb.find(">li").eq(num2).addClass("on");  
+            html2 = $gnb.find(".gnb_depth_1>li").eq(num1).find(".gnb_depth_2>li").clone();
+            $locDepth1.find("ul").html(html);
+            $locDepth2.find("ul").html(html2);
+            $locDepth1.find("ul>li").eq(num1).addClass("on");
+            $locDepth2.find("ul>li").eq(num2).addClass("on");
+
+            $location.find(".path_depth_1 span").text($locDepth1.find("ul>li").eq(num1).find("a").text());
+            $location.find(".path_depth_2 span").text($locDepth2.find("ul>li").eq(num2).find("a").text());
+
+            if (num2 == undefined ) $(".path_depth_2").remove();
+            
+
+           $(".path_depth_1>dd>ul>li").each(function () {
+                var remoteData = $(this).find(".toggle"); 
+                var remoteUrl = remoteData.attr("data-url");
+                remoteData.attr("href", remoteUrl);
+            });  
 
             $(document).on('click', '.path-item .btn-open', function() {
                 var pathItem = $(this).closest('.path-item');
-                $(pathItem).addClass('active').children('dd').slideDown();
-                $(pathItem).siblings().removeClass('active').children('dd').slideUp();
+                $(pathItem).addClass('active').children('dd').fadeIn();
+                $(pathItem).siblings().removeClass('active').children('dd').fadeOut();
                 }).on('click', '.path-item .btn-close', function() {
                 var pathItem = $(this).closest('.path-item');
-                $(pathItem).removeClass('active').children('dd').slideUp();
+                $(pathItem).removeClass('active').children('dd').fadeOut();
                 $('.btn-open', pathItem).focus();
                 }).on('mouseup', function(e) {
                 var pathList = $('.path-item.active');
@@ -333,19 +342,12 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
                     objPos.right = (objPos.left + $(pathList).width());
                     objPos.bottom = (objPos.top + $(pathList).height());
                     if( e.pageX < objPos.left || e.pageX > objPos.right || e.pageY < objPos.top || e.pageY > objPos.bottom ) {
-                    $(pathList).removeClass('active').children('dd').slideUp();
+                    $(pathList).removeClass('active').children('dd').fadeOut();
                     $('.btn-open', pathList).focus();
                     }
                 }
-            });
-        
-            //etc
-            /*var currentUrl = document.location.href.split("/"),
-                folderDir = currentUrl[5];
-                if (folderDir == 'etc') {
-                    $locDepth1.remove();
-                }
-                console.log(num1, num2)*/
+            });                   
+
         };
 
         var _linkLocation = function (num1, num2) {            
@@ -423,8 +425,8 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
                 depth2Arr[i].on('mouseenter focusin mouseleave focusout', depth2Handler);                              
             }  
 
-            setDepth1 = $('.gnb_depth_1>li.on').find(">a").attr('name').substr(7,1);
-            setDepth2 = $('.gnb_depth_2>li.on').find(">a").attr('name').substr(7,1);            
+            //setDepth1 = $('.gnb_depth_1>li.on').find(">a").attr('name').substr(7,1);
+            //setDepth2 = $('.gnb_depth_2>li.on').find(">a").attr('name').substr(7,1);            
 
             reSetMenu();   
         };
@@ -1896,10 +1898,8 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
     /* selectUpBox 스타일 모듈 */
     ns.register('selectUpBox');
     ns.selectUpBox = function(ele){
-
         var element, btn, isOpen=false, listCon, listHeight, closeTimer, listWrap;
         var i, max;
-
         element=ele;
         listWrap = $(element).find('div');
         listCon = listWrap.find('ul');

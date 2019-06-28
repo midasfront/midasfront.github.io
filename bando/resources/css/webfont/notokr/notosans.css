@@ -26,7 +26,7 @@
     font-weight: 350;    
     src: url(NotoSans-DemiLight.eot);
     src: url(NotoSans-DemiLight.eot?#iefix) format('embedded-opentype'),
-    url(NotoSans-DemiLight.woff) format('woff'),
+    /*url(NotoSans-DemiLight.woff) format('woff'),*/
     url(NotoSans-DemiLight.otf) format('truetype');
 }
 
@@ -36,7 +36,7 @@
     font-weight: 400;    
     src: url(NotoSans-Regular.eot);
     src: url(NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
-    url(NotoSans-Regular.woff) format('woff'),
+    /*url(NotoSans-Regular.woff) format('woff'),*/
     url(NotoSans-Regular.otf) format('truetype');
 }
 
