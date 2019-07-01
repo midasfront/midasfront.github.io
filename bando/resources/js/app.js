@@ -192,7 +192,7 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
                 }
 
                 //메인만 예외
-                if(pathName === "/" || pathName === "/index.php"){
+                if(pathName === "/" || pathName === "/bando/index.html"){
                     $("body").addClass("main");
                     $("header").addClass("main");                   
                 } else{
@@ -708,12 +708,12 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
                 var $nextLi = $mainVisual.find(".slick-slide").eq(num);
                 //TweenMax.set($nextLi.find(".img"), {autoAlpha:.5, scale:1.3, skewX:0.001});
                 TweenMax.set($nextLi.find(".img"), {autoAlpha:0});
-                TweenMax.set($nextLi.find(".mobj_1"), {autoAlpha:0});
-                TweenMax.set($nextLi.find(".mobj_2"), {autoAlpha:0});
+                TweenMax.set($nextLi.find(".mobj_1"), {autoAlpha:0, x:50});
+                TweenMax.set($nextLi.find(".mobj_2"), {autoAlpha:0, y:50});
                 //TweenMax.to($nextLi.find(".img"), 7, {scale:1.01, autoAlpha:1, ease:Linear.easeNone});
                 TweenMax.to($nextLi.find(".img"), 1, {autoAlpha:1, ease:Linear.easeNone});
-                TweenMax.to($nextLi.find(".mobj_1"), .8, {autoAlpha:1, ease:Cubic.easeOut});
-                TweenMax.to($nextLi.find(".mobj_2"), .8, {autoAlpha:1, ease:Cubic.easeOut});
+                TweenMax.to($nextLi.find(".mobj_1"), 1.2, {delay:.7, autoAlpha:1, x:0, ease:Cubic.easeOut});
+                TweenMax.to($nextLi.find(".mobj_2"), 1, {delay:1, autoAlpha:1, y:0, ease:Cubic.easeOut});
             };
 
             $('#SlidePrev').on('click', function(){
