@@ -666,21 +666,18 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
             var $visualcon, $copy1, $copy2, $copy3;
             var $mainVisual = $(".visual_slide");
             var wHeight = $(window).height();
+            var wWidth = $(window).width();
 
-            $(window).on("load resize", function(){
+            /*$(window).on("load resize", function(){
                 $mainVisual.find(".img").css("height", wHeight + "px");
             });
 
-
             $mainVisual.on("init reInit afterChange", function (event, slick, currentSlide, nextSlide) {
                 var $paging = $('.visual .page_info');
-
                 var i = (currentSlide ? currentSlide : 0) + 1;
-
                 $paging.html('<strong>'+i+'</strong>' + '/' + slick.slideCount);
-
             });
-
+            */
 
             $mainVisual.on("init", function(slick){
                 _bgMotion(0);
@@ -691,10 +688,10 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
                 fade:true,
                 slidesToShow:1,
                 slidesToScroll:1,
-                arrows:true,
+                arrows:false,
                 dots:false,
                 infinite: true,
-                autoplay:true,
+                autoplay:false,
                 autoplaySpeed:6000,
                 draggable:false,
                 speed:1000,
@@ -709,18 +706,24 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
 
             function _bgMotion(num){
                 var $nextLi = $mainVisual.find(".slick-slide").eq(num);
-
-                TweenMax.set($nextLi.find(".img"), {autoAlpha:.5, scale:1.3, skewX:0.001});
-                TweenMax.set($nextLi.find(".txt span"), {autoAlpha:0, y:40});
-                TweenMax.set($nextLi.find(".txt .copy"), {autoAlpha:0, y:40});
-                TweenMax.set($nextLi.find(".txt .copys"), {autoAlpha:0, y:40});
-
-                TweenMax.to($nextLi.find(".img"), 2, {autoAlpha:1, ease:Cubic.easeOut});
-                TweenMax.to($nextLi.find(".img"), 7, {scale:1.01, ease:Linear.easeNone});
-                TweenMax.to($nextLi.find(".txt span"), 2, {delay:.8, autoAlpha:1, y:0, ease:Power2.easeOut});
-                TweenMax.to($nextLi.find(".txt .copy"), 2, {delay:1.4, autoAlpha:1, y:0, ease:Power2.easeOut});
-                TweenMax.to($nextLi.find(".txt .copys"), 2, {delay:2.2, autoAlpha:1, y:0, ease:Power2.easeOut});
+                //TweenMax.set($nextLi.find(".img"), {autoAlpha:.5, scale:1.3, skewX:0.001});
+                TweenMax.set($nextLi.find(".img"), {autoAlpha:0});
+                TweenMax.set($nextLi.find(".mobj_1"), {autoAlpha:0});
+                TweenMax.set($nextLi.find(".mobj_2"), {autoAlpha:0});
+                //TweenMax.to($nextLi.find(".img"), 7, {scale:1.01, autoAlpha:1, ease:Linear.easeNone});
+                TweenMax.to($nextLi.find(".img"), 1, {autoAlpha:1, ease:Linear.easeNone});
+                TweenMax.to($nextLi.find(".mobj_1"), .8, {autoAlpha:1, ease:Cubic.easeOut});
+                TweenMax.to($nextLi.find(".mobj_2"), .8, {autoAlpha:1, ease:Cubic.easeOut});
             };
+
+            $('#SlidePrev').on('click', function(){
+                $mainVisual.slick('slickPrev');
+            });
+
+            $('#SlideNext').on('click', function(){
+                $mainVisual.slick('slickNext');
+            });
+
 
         };
 
@@ -784,463 +787,6 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
             init: _init
         }
     }();  
-
-
-    ns.register('mainFunc');
-    ns.mainFunc = function(){
-        var winH, winW;
-        var player, now, status;
-
-        var _init = function() {
-            var winH =  $(window).height();            
-            $(window).on("load resize", function(){
-                if (winH > 970) {
-                    $(".main_container").css("height", winH + "px");  
-                } else {
-                    $(".main_container").css("height", "1160px");  
-                } 
-            });            
-            visualImg();
-            visualFn();
-            TweenMax.from($(".main_visual").find(".open"),2, {delay:1, y:200, opacity:0, ease:Cubic.easeOut}) 
-
-        };
-        var visualImg = function(){
-            var bgImg, bgCon, menuCon, menuConOverArr=[], menuTnum=0, leady=true, reSetBgTimer, playBtn, isPlay=true, conVis;
-            var bgCon = $('.main_visual');
-            var bgImg = bgCon.find('.visual_con');
-            var menuCon = $('.main_visual .menu_con').find('>li>a');   
-            $(bgImg).css('opacity', '0');             
-                
-            menuCon.each(function(index, item){
-                $(item).attr('name', 'menu_'+index);
-                menuConOverArr.push($(item));
-            });     
-            menuCon.on('mouseenter focusin mouseleave focusout click', menuHandler);
-            menuOver(menuTnum);
-            menuSelect(menuTnum);           
-            startBgTimer();
-
-            var menuHandler = function(e){
-                 e.preventDefault();
-                var num = e.currentTarget.getAttribute('name').substr(5,1);
-                var target = e.currentTarget;
-                switch ( e.type ) {
-                    case 'mouseenter':                        
-                    case 'focusin':
-                        menuOver(num);
-                        stopBgTimer();
-                        break;
-                    case 'focusout':
-                    case 'mouseleave':   
-                        menuOver(menuTnum);
-                        startBgTimer();
-                        break; 
-                    case 'click':                   
-                        menuSelect(num);
-                        break;  
-                }
-            };
-
-            function menuSelect(num){
-                if(!leady)return;
-                leady = false;
-                menuTnum = num;  
-                menuOver(menuTnum);
-                $(bgImg[num]).css({'display':'block'})
-               //  TweenMax.to($(bgImg), 1, {css:{opacity:1}, delay:0.5});
-              
-                
-                for(var i=0; i < 2; i++){
-                    
-                    if(num == i){
-                       TweenMax.to($(bgImg[num]), 0.5, {css:{opacity:1}});
-                        tl = new TimelineLite({delay: .5});
-                        tl.from($(bgImg[num]).find('.obj_left'), .7, {paddingRight:0, autoAlpha: 0, ease:Cubic.easeOut})
-                          .from($(bgImg[num]).find('.obj_right'), .7, {paddingLeft:0, autoAlpha: 0, ease:Cubic.easeOut}, "-=0.7")
-                          .from($(bgImg[num]).find('.obj_3'), .5, {y:50, autoAlpha: 0, ease:Cubic.easeOut}, "+=.4")
-                          .from($(bgImg[num]).find('.obj_4'), .6, {y:50, autoAlpha: 0, ease:Cubic.easeOut}, "-=0.2")
-                          .from($(bgImg[num]).find('.obj_5'), .6, {y:50, autoAlpha: 0, ease:Cubic.easeOut}, "-=0.2");
-                        tl.play();
-                    }else{                   
-                       TweenMax.to($(bgImg[i]), 0.5, {css:{opacity:0}});                      
-                    }                    
-                };
-                TweenMax.delayedCall(1.8, function(){leady = true;})
-                startBgTimer();
-            };
-
-            function startBgTimer(){
-                 if(!isPlay)return;
-                stopBgTimer();
-                reSetBgTimer = setTimeout (function(){
-                    var reNum = Number(menuTnum)+1;
-                    if(reNum >= 2)reNum = 0;
-                    
-                    menuSelect(reNum);
-                }, 5000 );
-            };
-
-            function stopBgTimer(){
-                clearTimeout( reSetBgTimer );
-            };        
-
-            function menuOver(num){
-                for(var i=0; i < 2; i++){
-                    if(num == i){
-                        TweenMax.to($(menuConOverArr[num]), 0.3, {className:'+=on'});
-                    }else{
-                        TweenMax.to($(menuConOverArr[i]), 0.3, {className:'-=on'});
-                    }
-                };
-            };
-
-        }
-
-
-        var visualFn = function(){
-            var $fnBtn, $conImg, fnHandler;
-
-            $conImg = $(".func_con");                 
-            $fnBtn = $('.main_func').find('>ul>li');  
-            $conImg.css("opacity", 0);
-            $conImg.find("p").css("opacity", 0);
-            TweenMax.set($conImg.find("p"), {y:50, autoAlpha: 1});
-
-            $fnBtn.on('mouseenter focusin mouseleave focusout', function(e) {
-                var ntxt = $(this).find("dd").data("txt");
-                var hvtxt = $(this).find("dd").data("hv");
-                switch ( e.type ) {
-                    case 'mouseenter':
-                    case 'focusin':
-                        TweenMax.to($(this), 0.3, {className:'+=on'}); 
-                        TweenMax.to($(this).find(".func_con"), .5, {autoAlpha: 1, ease:Cubic.easeOut});
-                        TweenMax.to($(this).find(".func_con").find("p"), .5, {y:0, autoAlpha: 1, ease:Cubic.easeOut});                   
-                        break;
-                    case 'focusout':
-                    case 'mouseleave':
-                        TweenMax.to($(this), 0.3, {className:'-=on'}); 
-                        TweenMax.to($(this).find(".func_con"), .5, {autoAlpha: 0, ease:Cubic.easeOut});
-                        TweenMax.to($(this).find(".func_con").find("p"), .5, {y:50, autoAlpha: 0, ease:Cubic.easeOut});
-                        break;
-                }
-            });
-        }
-
-        return {
-            init: _init
-        }
-    }();
-
-    ns.register('mainCircle');
-    ns.mainCircle = function(){
-        var winH, winW;
-        var thisV, conVis, sections, conHeight = 1160;
-        var v_menu, v_menu_circle, v_cons, vTimer, timerObj ={value:0}, vNum, pNum, vLeady=true, r, c, tls=[], popupContents, bg2;
-
-        var _init = function(){
-            conVis = $('.main_container');
-            bg2 = $('.visual_con > .vimg');
-            //menu0Set();  
-            //vHandler(0);
-            mainSlide();
-            visualFn();
-            $(window).resize(resize);
-            resize();
-            setTimeout(resize, 100);
-            setTimeout(resize, 200);
-            setTimeout(resize, 300);
-        };
-
-        var resize = function(){
-            wHeight = $(window).height();
-            wWidth = $(window).width();
-            f_Height = $('#footer').outerHeight();
-            if (wWidth < 1600) {
-                $(".main_func").css({'margin-left':'0', 'left':'auto', 'right':'0'});
-            } else {
-                $(".main_func").css({'margin-left':'800px'});
-            }
-
-
-            if (wHeight > 970) {
-                //conVis.css({"height":1080 + "px"});
-                //$(".main_visual").css({"height":wHeight + "px"});
-                //$(".main_container").css("height", wHeight + "px");  
-                //$(".main_container").find(".visual_con_1 .vimg").css("top", "-160px");
-                //$(".main_func > ul").css("height", wHeight + "px");                  
-            } else {
-               
-                //conVis.find('.vimg').css("background-position-y", -160 + "px");
-                //$(".main_container").css("height", "1115px");  
-            }
-            
-             conVis.css({"height":wHeight-f_Height + "px"});
-            $(".main_visual").css({"height":wHeight-f_Height + "px"});
-            $(".main_visual").find(".slick-track").css({"height":wHeight-f_Height + "px"});
-            
-            
-
-            //$mainVisual.find(".v_slide").css("height", wHeight + "px");
-
-        }
-        var mainSlide = function(){
-            var $slick_ele = $(".main_visual");
-            var $pager = $(".menu_con >li");
-            /*var vtl = new TimelineMax({});   
-            vtl.from($visualcon.find(".obj_1"),.7,{"autoAlpha":0, "y":80, ease:Cubic.easeOut})
-               .from($visualcon.find('.obj_2'),.8,{"autoAlpha":0, "y":80, ease:Cubic.easeOut}, "-=.5")
-               .from($visualcon.find('.obj_3'),.8,{"autoAlpha":0, "y":80, ease:Cubic.easeOut}, "-=.3")            
-               .from($visualcon.find('.obj_4'),.8,{"autoAlpha":0, "y":80, ease:Cubic.easeOut}, "-=.5")            
-               .to($footer,.3,{"autoAlpha":1, ease:Cubic.easeOut}, "-=.8")
-            vtl.play(); 
-
-            function resize(){
-                $visualcon.css("height", wHeight + "px");
-                $mainVisual.find(".v_slide").css("height", wHeight + "px");
-            }
-            $(window).on("resize", function(){ 
-                resize()              
-            });
-            resize();
-            */
-            
-            $slick_ele.on("init", function(slick){
-                _bgMotion(0);
-            });
-
-            $slick_ele.slick({                
-                infinite: false,
-                autoplay: true,
-                arrows:false,
-                draggable :true,
-                autoplaySpeed: 5000,
-                speed: 1000,
-                fade:false,
-                dots: false,
-                focusOnSelect: false,
-            });
-
-            $slick_ele.on("afterChange", function (event, slick, currentSlide, nextSlide) {               
-                var $current = $pager.eq(currentSlide);                               
-                $pager.removeClass("on");
-                $current.addClass("on");
-                //TweenMax.set($pager.find(".over"), {autoAlpha:0});
-                //TweenMax.to($current.find(".over"), .5, {autoAlpha:1, ease:Power2.easeOut});                                                               
-            });
-            
-            $pager.find(">a").on("click",function(e){ 
-                e.preventDefault();               
-                var slideno = $(this).data('slide');
-                $slick_ele.slick('slickGoTo', slideno);               
-            });
-
-
-            $slick_ele.on("beforeChange", function(event, slick, currentSlide, nextSlide){
-                _bgMotion(nextSlide);                
-            });
-
-            function _bgMotion(num){
-               var $nextLi = $slick_ele.find(".slick-slide").eq(num);
-               TweenMax.set($(".obj_1"), {autoAlpha:0, y:80});
-               TweenMax.set($(".obj_2"), {autoAlpha:0, y:80});
-               TweenMax.set($(".obj_3"), {autoAlpha:0, y:80});
-               TweenMax.to($nextLi.find(".obj_1"), .7, {delay:.3, autoAlpha:1, y:0, ease:Power2.easeOut});
-               TweenMax.to($nextLi.find(".obj_2"), .7, {delay:.5, autoAlpha:1, y:0, ease:Power2.easeOut});
-               TweenMax.to($nextLi.find(".obj_3"), 1, {delay:.7, autoAlpha:1, y:0, ease:Power2.easeOut});
-            };
-
-
-        }
-        var menu0Set = function(){
-            var t0, t1, t2;
-            r = 33;
-            c = Math.PI*(r*2);
-
-            v_cons = $('.main_visual > .visual_con');
-            v_cons_w = v_cons.outerWidth();            
-            v_menu = $('.main_visual .menu_con >li');
-            v_menu_circle = $('.main_visual .menu_con #bar');
-
-            v_menu.on('click', function(e){   
-                var num = Number($(e.currentTarget).index());  
-                if(!vLeady)return;
-                vHandler(num)
-            });                       
-            
-            vTimer = new TweenMax(timerObj, 5, {value:5, onUpdate:updateHandler, ease:Linear.easeNone, repeat:0, onComplete:completeHandler})
-            vTimer.pause();
-            
-            function updateHandler(e) {
-
-                var per = vTimer.progress()*100;  
-
-                vTimerHandler(per)         
-            }
-            function completeHandler() {
-                
-                var num = vNum;
-                num++;
-                if(num>=3){
-                    num = 0;
-                }
-                vHandler(num)
-            }
-            
-            t0 = new TimelineLite({onReverseComplete:motionReverseComplete, onComplete:motionComplete, onCompleteParams:['t0'], paused:true});
-            t0.from($(v_cons[0]).find('.vimg'), 1.5, {marginLeft:-v_cons_w, autoAlpha:0, ease:Cubic.easeOut});
-            t0.from($(v_cons[0]).find('.obj_1'), .7, {y:50, autoAlpha:0, ease:Sine.easeOut},'-=0.7');
-            t0.from($(v_cons[0]).find('.obj_2'), .5, {y:50, autoAlpha:0, ease:Sine.easeOut},'-=0.2');
-            t0.from($(v_cons[0]).find('.obj_3'), .5, {y:50, autoAlpha:0, ease:Sine.easeOut}, '-=0.2');            
-            tls.push(t0);
-
-            t1 = new TimelineLite({onReverseComplete:motionReverseComplete, onComplete:motionComplete, onCompleteParams:['t1'], paused:true});           
-            t1.from($(v_cons[1]).find('.vimg'), 1.5, {marginLeft:-v_cons_w, autoAlpha:0, ease:Cubic.easeOut});
-            t1.from($(v_cons[1]).find('.obj_1'), .7, {y:50, autoAlpha:0, ease:Sine.easeOut}, '-=0.7');
-            t1.from($(v_cons[1]).find('.obj_2'), .5, {y:50, autoAlpha:0, ease:Sine.easeOut},'-=0.2');
-            t1.from($(v_cons[1]).find('.obj_3'), .5, {y:50, autoAlpha:0, ease:Sine.easeOut}, '-=0.2');             
-            tls.push(t1);
-
-            t2 = new TimelineLite({onReverseComplete:motionReverseComplete, onComplete:motionComplete, onCompleteParams:['t2'], paused:true});                   
-            t2.from($(v_cons[2]).find('.vimg'), 1.5, {marginLeft:-v_cons_w, autoAlpha:0, ease:Cubic.easeOut});
-            t2.from($(v_cons[2]).find('.obj_1'), .7, {y:50, autoAlpha:0, ease:Sine.easeOut}, '-=0.7');
-            t2.from($(v_cons[2]).find('.obj_2'), .5, {y:50, autoAlpha:0, ease:Sine.easeOut},'-=0.2');
-            t2.from($(v_cons[2]).find('.obj_3'), .5, {y:50, autoAlpha:0, ease:Sine.easeOut}, '-=0.2');                         
-            tls.push(t2);           
-        }
-
-        var vTimerHandler = function(per){
-            var pct = ((100-per)/100)*c;            
-            $(v_menu_circle[vNum]).css({ strokeDashoffset: pct});
-        }
-
-        var motionReverseComplete = function(param){  
-          //console.log('motionReverseComplete',vLeady)           
-        }
-
-        var reStart = function(){
-           pNum = undefined;
-           vHandler(vNum);
-        }
-
-        var motionComplete = function(param){ 
-           //console.log(param) 
-           pNum = vNum;      
-           vLeady = true;
-           /*var $nextLi = v_cons.eq(vNum); 
-           TweenMax.set($nextLi.find(".vimg"), {autoAlpha:.5, scale:1.3, skewX:0.001});     
-           TweenMax.set($nextLi.find(".obj_1"), {autoAlpha:0, y:0});
-           TweenMax.set($nextLi.find(".obj_2"), {autoAlpha:0, y:0});
-           TweenMax.set($nextLi.find(".obj_3"), {autoAlpha:0, y:0});*/
-           //console.log('motionComplete' ,vLeady) 
-        }
-
-        var vHandler = function(num){                 
-            //if(num == vNum)return;
-           // console.log(vLeady)
-           console.log('vNum:'+vNum, 'pNum:'+pNum)
-            vLeady = false;            
-            if(pNum != undefined){
-                tls[pNum].timeScale(2.5);
-                tls[pNum].reverse();
-                vTimer.pause();
-                vNum = num;                
-                TweenLite.delayedCall(1, reStart) 
-            }else{
-                vNum = num;
-                vTimer.seek(0);
-                vTimer.play();
-                tls[num].timeScale(1);
-                tls[num].restart();
-
-                //TweenLite.to($(v_cons[vNum]).find('.bg'), 1, {autoAlpha:1, ease:Sine.easeOut}); 
-            }
-                        
-           vLeady = false;
-            $(v_menu).removeClass('on')
-            $(v_menu).eq(num).addClass('on')
-            $(v_menu_circle).css({ strokeDashoffset: 210});
-
-          $(v_cons).css('z-index', '0')      
-            if(num > 0){
-               $(v_cons[num]).css('z-index', '222')      
-            }
-
-        };
-
-
-        var visualFn = function(){
-            var $fnBtn, $conImg, fnHandler;
-
-            $conImg = $(".func_con");                 
-            $fnBtn = $('.main_func').find('>ul>li');              
-            $(this).find(".func_con").css("display","none");
-            TweenMax.set($conImg.find("dl"), {left:100, autoAlpha: 0});
-            TweenMax.set($conImg, {width:0, autoAlpha: 0});
-
-
-            $fnBtn.on('mouseenter focusin mouseleave focusout', function(e) {                
-                switch ( e.type ) {
-                    case 'mouseenter':
-                    case 'focusin':
-                        TweenMax.to($(this), 0.3, {className:'+=on'}); 
-                        $(this).find(".func_con").css("display","block");
-                        TweenMax.to($(this).find(".func_con"), .5, {width:200, autoAlpha: 1, ease:Cubic.easeOut});
-                        TweenMax.to($(this).find(".func_con").find("dl"), .5, {delay:.2, left:0, autoAlpha: 1, ease:Cubic.easeOut});                   
-                        break;
-                    case 'focusout':
-                    case 'mouseleave':
-                        TweenMax.to($(this), 0.3, {className:'-=on'});                         
-                        TweenMax.to($(this).find(".func_con"), .5, {width:0, autoAlpha: 0, ease:Cubic.easeOut, onComplete:function(){                                                              
-                        }});                        
-                        $(this).find(".func_con").css("display","none"); 
-                        TweenMax.to($(this).find(".func_con").find("dl"), .5, {left:100, autoAlpha: 0, ease:Cubic.easeOut}, '+=0.3');
-                        break;
-                }
-            });
-        }
-
-        return {
-            init: _init
-        }
-    }();
-
-   
-   
-    ns.register('topchange');
-    ns.topchange = function(){
-
-        var _init = function(){          
-           M_copy();
-        };
-
-        var M_copy = function(){
-            t1 = new TimelineLite({onComplete:M_delay});
-            t1.to($(".top_tel").find('.copy'), 1, {autoAlpha: 1, ease:Cubic.easeOut})
-              .to($(".top_tel").find('.tel'), 1, {autoAlpha: 0, ease:Cubic.easeOut}, "-=1")
-            t1.play();
-        }
-
-        var M_delay = function(){
-            TweenMax.delayedCall(2, M_phone);  
-        }
-
-        var M_phone = function(){  
-            t2 = new TimelineLite({onComplete:M_delay2});
-            t2.to($(".top_tel").find('.tel'), 1, {autoAlpha: 1, ease:Cubic.easeOut})
-              .to($(".top_tel").find('.copy'), 1, {autoAlpha: 0, ease:Cubic.easeOut}, "-=1")
-            t2.play();
-        }
-
-        var M_delay2 = function(){
-            TweenMax.delayedCall(2, M_copy);  
-        }
-
-        return {
-            init: _init
-        }
-    }();
-
 
     ns.register('mainscroll');
     ns.mainscroll = function(){
@@ -1448,7 +994,6 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
     }();
 
     
-
     /* 메인 팝업 모듈 */
     ns.register('popup');
     ns.popup = function(){
