@@ -102,7 +102,7 @@ table .w12 {width: 120px;}
 }
 .common_tb_row tbody tr td:first-child {}
 .common_tb_row tbody td a:hover { text-decoration: underline;}    
-
+.common_tb_row tbody td.nodata {padding: 6rem 0;}
 
 /*
     popup
@@ -392,7 +392,7 @@ header {z-index: 101; width: 100%; text-align: center;}
 */
 .top_loc_con {
     width: 100%;
-    min-width: 1280px;
+    min-width: 1000px;
     border-bottom: 1px solid #e7e7e7;
     height: 54px;
     text-align: center;

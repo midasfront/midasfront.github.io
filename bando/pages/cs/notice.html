@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-language" content="ko">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no,target-densitydpi=medium-dpi">
+	<meta name="robots" content="all" />
+	<title>반도문화재단</title>
+	<meta name="author" content="반도문화재단" />
+	<meta name="title" content="반도문화재단" />
+	<meta name="Description" content="반도문화재단">
+	<meta name="Keywords" content="반도문화재단">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="반도문화재단">
+	<meta property="og:description" content="반도문화재단">
+	<meta property="og:url" content="https://www.bando.com">
+	<meta property="og:image" content="/bando/resources/img/og_img.png">
+	<link rel="shortcut icon" href="/bando/resources/img/common/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="/bando/resources/css/style.css">
+	<script type="text/javascript" src="/bando/resources/js/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/bando/resources/js/libs/modernizr.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/jquery/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/greensock/easing/EasePack.min.js"></script>    
+    <script type="text/javascript" src="/bando/resources/js/libs/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/libs/jquery/slick.js"></script>
+    <script type="text/javascript" src="/bando/resources/js/app.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="header" role="header">
+			<div class="header_con">
+				<h1><a href="/bando/"><img src="/bando/resources/img/common/top_logo.png" alt="lvy Lounge"></a></h1>
+				<nav id="gnb" class="gnb">
+					<ul class="gnb_depth_1">
+						<li><a href="javascript:alert('준비중입니다.');"><strong>전시<em></em>프로그램</strong></a></li>
+						<li><a href="/bando/pages/library/library_intro.html"><strong>도서관</strong></a>
+							<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/library/library_intro.html">도서관 소개</a></li>
+	                    		<li><a href="javascript:alert('준비중입니다.');">도서 관리</a></li>
+	                    	</ul>
+	                    </li>										
+	          			<li><a href="/bando/pages/nanum/nanum_info.html"><strong>문화나눔</strong></a>
+	          				<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/nanum/nanum_info.html">나눔사업소개</a></li>
+	                    	</ul>
+	          			</li>
+	          			<li><a href="javascript:alert('준비중입니다.');"><strong>스토리</strong></a>
+	          				<ul class="gnb_depth_2">
+	                    		<li><a href="javascript:alert('준비중입니다.');">스토리</a></li>
+	                    	</ul>
+	          			</li>
+	          			<li><a href="/bando/pages/cs/location.html"><strong>이용안내</strong></a>
+	          				<ul class="gnb_depth_2">
+	                    		<li><a href="/bando/pages/cs/notice.html">공지사항</a></li>
+	                    		<li><a href="javascript:alert('준비중입니다.');">행사캘린더</a></li>
+	                    		<li><a href="javascript:alert('준비중입니다.');">이용/대관안내</a></li>
+	                    		<li><a href="/bando/pages/cs/space_intro.html">공간소개</a></li>
+	                    		<li><a href="/bando/pages/cs/location.html">찾아오시는길</a></li>                    		
+	                    	</ul>
+	          			</li>					
+					</ul>
+				</nav>
+
+				<div class="top_link_sec">
+					<ul class="top_sns">
+						<li><a href="#"><i class="icosns top_sns_1"></i></a></li>
+						<li><a href="#"><i class="icosns top_sns_2"></i></a></li>
+						<li><a href="#"><i class="icosns top_sns_3"></i></a></li>
+					</ul>
+					<a href="javascript:alert('준비중입니다.');">반도문화재단</a>
+				</div>
+			</div>
+		</header>
+
+		<div id="container">
+			
+			<section class="layout_top">
+				<div class="top_visual">
+					<h2 id="title"></h2>	
+				</div>		
+
+				<div class="top_loc_con">		
+					<div class="location_nav">
+						<a href="index.html" class="home">home</a>
+						<dl class="path-item path_depth_1">
+							<dt>
+								<span></span>
+								<button type="button" class="btn-open">열기</button>
+							</dt>
+							<dd>
+								<ul>
+								</ul>
+								<button type="button" class="btn-close">닫기</button>
+							</dd>
+						</dl>
+						<dl class="path-item path_depth_2">
+							<dt>
+								<span></span>
+								<button type="button" class="btn-open">열기</button>
+							 </dt>
+							<dd>
+								<ul>
+								</ul>
+								<button type="button" class="btn-close">닫기</button>
+							</dd>
+						</dl>
+
+						<ul class="sns_list">
+							<li><a href="#"><i class="icosns nav_sns_1"></i>Facebook</a></li>					
+							<li><a href="#"><i class="icosns nav_sns_2"></i>Daum</a></li>					
+							<li><a href="#"><i class="icosns nav_sns_3"></i>Blog</a></li>		
+							<li><a href="#"><i class="icosns nav_sns_4"></i>Mail</a></li>
+							<li><a href="#"><i class="icosns nav_sns_5"></i>Print</a></li>
+							<li><a href="#"><i class="icosns nav_sns_6"></i>Clipboard</a></li>
+						</ul>
+
+					</div>
+					<!-- //location_nav -->
+					
+							
+
+				</div>	
+				<!-- //top_loc_con -->
+
+			</section>
+
+			<section class="layout_body">
+				<div class="grid_box location_map">
+					<div class="pg_container">
+
+						<ul class="tab_boxtype tablist_5">
+						    <li class="on"><a href="javascript:alert('준비중입니다.');">공지사항</a></li>
+                    		<li><a href="javascript:alert('준비중입니다.');">행사캘린더</a></li>
+                    		<li><a href="javascript:alert('준비중입니다.');">이용/대관안내</a></li>
+                    		<li><a href="/bando/pages/cs/space_intro.html">공간소개</a></li>
+                    		<li><a href="/bando/pages/cs/location.html">오시는길</a></li>
+						</ul>
+
+						<h3>공지사항
+							<p class="tit_summary">반도문화재단에서 공지사항을 알려드립니다.</p> 
+						</h3>
+						
+						
+
+						<div class="top_search_box">   
+			                <div class="select_box_con">
+			                    <span class="select">
+			                        <span class="select-wrapper">
+			                            <select id="searchType" name="searchType">   
+			                                <option value="s_all">전체</option>                                
+			                                <option value="s_title">제목</option>                                
+			                                <option value="s_contents">내용</option>                                
+			                            </select>
+			                        </span>
+			                    </span> 
+			                    <span class="search_in">
+			                        <div class="placeholder">
+			                            <label for="searchText">검색어를 입력해주세요.</label>
+			                            <input type="text" name="searchText" id="searchText" value="" class="btmline">
+			                        </div>
+			                        <a href="javascript:onSearch(document.listForm);" class="btn btn-search">검색</a>
+			                    </span>
+			                    <span class="select select_list">
+			                        <span class="select-wrapper">
+			                            <select id="searchCount" name="searchList">   
+			                                <option value="">10</option>                             
+			                                <option value="">20</option>
+			                                <option value="">30</option>
+			                            </select>
+			                        </span>
+			                    </span> 
+			                </div>
+			            </div>
+
+
+						
+						<div class="notice_table">
+							<table class="common_tb_row">
+						          <caption>번호, 제목, 작성일</caption>
+						          <colgroup>
+						            <col class="w12">
+						            <col class="*">						            
+						            <col class="w12">						            
+						          </colgroup>					          
+						          <thead>
+							          <tr>
+							          	<th scope="col">번호</th>
+							          	<th scope="col">제목</th>
+							          	<th scope="col">작성일</th>
+							          </tr>
+						          </thead>
+						          <tbody>
+						          	<tr>
+							          	<td class="nodata" colspan="3">등록된 게시물이 없습니다.</td>
+							          </tr> 
+							          <tr class="notice_top">
+							          	<td class="num pin"><i class="lnr lnr-pushpin"></i></td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내</a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr>
+							          <tr>
+							          	<td class="num">1</td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내</a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr> 					          
+							          <tr>
+							          	<td class="num">2</td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내 <i class="far fa-folder-open"></i></a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr>
+							          <tr>
+							          	<td class="num">3</td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내</a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr>
+							          <tr>
+							          	<td class="num">4</td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내</a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr>
+							          <tr>
+							          	<td class="num">5</td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내</a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr>
+							          <tr>
+							          	<td class="num">6</td>
+							          	<td class="sbj"><a href="#">[대관] 2019년 하반기 갤러리 수시대관 신청안내</a></td>
+							          	<td class="date">2019.09.30</td>
+							          </tr>
+						          </tbody>
+						      </table>
+						</div>
+
+
+						<div class="pagination">
+			                <ul>                    
+			                    <li><a href="javascript:;" onclick="onPaging(document.listForm, 1)" class="prev pagbtn">이전</a></li>
+			                    <li><a href="javascript:;">1</a></li>
+			                    <li><strong>2</strong></li>
+			                    <li><a href="javascript:;">3</a></li>
+			                    <li><a href="javascript:;" onclick="onPaging(document.listForm, 1)" class="next pagbtn">다음</a></li>
+			                </ul>
+			            </div>
+		            	<!-- //pagination -->
+
+
+						
+
+
+					</div>
+					<!-- //pg_container -->
+				</div>
+				<!-- //grid_box -->
+			</section>
+			<!-- //layout_body -->
+		</div>
+		<!-- //container -->
+
+
+		<footer id="footer" role="footer">
+		    <div class="footer_con">
+		    	<div class="inner">
+			        <ul class="footer_link">
+			            <li><a href="/etc/privacy">개인정보처리방침</a></li>
+			            <li><a href="/etc/rules">법적고지</a></li>
+			        </ul> 
+
+			        <ul class="footer_sns">
+			            <li><a href="#"><i class="icosns top_sns_1"></i>Blog</a></li>
+			            <li><a href="#"><i class="icosns top_sns_2"></i>Facebook</a></li>
+			            <li><a href="#"><i class="icosns top_sns_3"></i>Instagram</a></li>
+			        </ul>
+
+			        <div class="familysite" id="Fnfamily">	           
+		                <a href="javascript:;">FAMILY SITE</a>
+		                <div>
+		                    <ul class="list">
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                        <li><a target="_blank" href="http://www.naver.com">반도건설</a></li>
+		                    </ul>
+		                </div>
+			        </div>
+			        <!-- //familysite -->  	              
+			    </div>
+			    <!-- //inner -->
+			</div>
+		    <!-- //footer_con -->
+		    <div class="address_con"> 
+		    	<div class="inner">
+				    <address>
+				           <p class="txt_addr">
+				           		<span>반도문화재단 (12345) 경기도 화성시 동탄광역환승로 73</span>
+				           		<span>Tel : 031-2019-0521  |  개인정보관리책임자 : 최동민</span>
+				           	</p>
+				            <p class="txt_copyright">Copyright ⓒ 2019 by Bando Foundation for Art & Culture. All right reserved.</p>
+				    </address>
+				</div>
+				<!-- //inner -->
+		    </div>
+		    <!-- //address_con -->
+		</footer>
+		<!-- //footer -->
+
+
+			
+	</div>
+	<!-- //wrap -->
+
+	<script type="text/javascript">
+		(function (ns) {
+            $(function(){               
+               //ns.includeHTML.init();
+               ns.placeholder.init();
+
+               ns.gnb_hor.init();
+               ns.chkScreen.init();
+               ns.Numbering.init();               
+               ns.selectUpBox($('#Fnfamily'));  
+            });
+         })(APP || {});
+	</script>
+
+
+</body>
+</html>

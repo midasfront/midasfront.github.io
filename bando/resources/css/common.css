@@ -384,9 +384,9 @@ select {
 }
 
 .select-wrapper:before {
-  content: "\f0d7";
+  content: "\e874";
   display: inline-block;
-  font-family: FontAwesome;
+  font-family:Linearicons-Free;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -716,39 +716,39 @@ input[type="text"], input[type="password"] {
  font-family:HelveticaNeue-Light, tahoma, sans-serif,arial;
   text-align:center;      
   font-weight:400;
-  padding: 60px 0;
+  padding: 1rem 0;
 }
 .pagination ul {display: inline-block;}
 .pagination ul li { display: inline-block; padding: 0 4px;}
 .pagination a {  
   border:#cfcfcf 1px solid;
-  width:40px;
-  height:40px;
-  line-height:38px;
+  width:2rem;
+  height:2rem;
+  line-height:2rem;
   color:#8d8d8d;
-  font-size:15px;
+  font-size:0.85rem;
   text-align:center; 
   padding:0 !important; 
   background:#fff;       
   float: left;
 }
 .pagination strong { 
-  font-size:15px;
+  font-size:0.85rem;
   font-weight: 500;
-  width:40px; 
-  height:40px;
-  line-height:38px; 
+  width:2rem; 
+  height:2rem;
+  line-height:2rem; 
   padding:0;
-  background:#fff;        
+  background:#002f7b;        
   margin-left: -1px;
   float: left;
   position: relative;
   text-align: center;
-  border:#cfcfcf 1px solid;
-  color: #8d8d8d;
+  border:#002f7b 1px solid;
+  color: #fff;
 }
 .pagination strong:before {
-  content: "";
+  /*content: "";
   height:4px;
   left: -1px;
   bottom: -1px;
@@ -756,15 +756,15 @@ input[type="text"], input[type="password"] {
   width:40px;    
   position: absolute;    
   background: #2d5cbc;
-  z-index: 21;
+  z-index: 21;*/
 }
 .pagination a.pagbtn {background-color: #fff; font-size: 0; color: transparent;}
 .pagination a.prev {}
 .pagination a.next {}
-.pagination a.prev:before{font-family: 'FontAwesome'; content: "\f104"; font-size:20px; color: #888; margin-left: -3px;}
-.pagination a.first:before{font-family: 'FontAwesome'; content: "\f100"; font-size:20px; color: #888;}
-.pagination a.next:before{font-family: 'FontAwesome'; content: "\f105"; font-size:20px; color: #888; margin-left:3px;}
-.pagination a.last:before{font-family: 'FontAwesome'; content: "\f101"; font-size:20px; color: #888;}
+.pagination a.prev:before{font-family: 'FontAwesome'; content: "\f104"; font-size:1rem; color: #888; margin-left: -3px;}
+.pagination a.first:before{font-family: 'FontAwesome'; content: "\f100"; font-size:1rem; color: #888;}
+.pagination a.next:before{font-family: 'FontAwesome'; content: "\f105"; font-size:1rem; color: #888; margin-left:3px;}
+.pagination a.last:before{font-family: 'FontAwesome'; content: "\f101"; font-size:1rem; color: #888;}
 
 /*
   placeholder
