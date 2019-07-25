@@ -16,12 +16,12 @@ $(document).ready(function(){
 	//setInterval(schedule, 300000); // 5min
 	setInterval(todyaDate, 60000);//10min 새로고침	60000=1분
 	setInterval(DataLoadUI, 600000);//10min 새로고침	60000=1분	
-//	setInterval(fnTodayWeather, 300000);//5min 새로고침	60000=1분
+	//setInterval(fnTodayWeather, 300000);//5min 새로고침	60000=1분
 	//setInterval(fnYesterdayWeather, 600000);//10min 새로고침 60000=1분
 	$.ajaxSetup({ cache: false });
 
 	//schedule();
-	//fnTodayWeather_cookie();
+	fnTodayWeather_cookie();
 	//fnYesterdayWeather();
 	todyaDate();
 });
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		<div class="left_sec">
 			<div class="floor_data">
 				<dl>
-					<dt class="data-floor"><em>20</em>F</dt>
+					<dt class="data-floor"><em></em>F</dt>
 					<dd>
 						<ul class="data-left-sec"></ul>
 					</dd>
@@ -45,11 +45,11 @@ $(document).ready(function(){
 			<div class="top_sec">
 				<div class="container" id="lay_out">
 					<div class="left_date">
-						<span class="date">2019. 5. 14. <strong>화요일</strong></span> 
-						<span class="time"><em>PM</em> 04:34</span> 
+						<span class="date"><strong></strong></span> 
+						<span class="time"><em></em></span> 
 					</div>
 					<div class="weather_con">
-						<!-- <div class="now_weather" id="now_today"></div> -->
+						<div class="now_weather" id="now_today"></div>
 					</div>
 				</div>
 			</div>
@@ -62,7 +62,7 @@ $(document).ready(function(){
 		<div class="right_sec">
 			<div class="floor_data">
 				<dl>
-					<dt class="data-floor"><em>20</em>F</dt>
+					<dt class="data-floor"><em></em>F</dt>
 					<dd>
 						<ul class="data-right-sec"></ul>
 					</dd>
@@ -80,27 +80,36 @@ $(document).ready(function(){
         function DataLoadUI(){
         	// ajax
 	    	$.ajax({
-	    		url:"json/floor20.json",
+	    		url:"/daewoo/local/json/floor20.json",
 	    		method:"GET",
 	    		dataType:"jsonp",
             	jsonpCallback:"callback",
-	    		success:function(result){
+	    		success:function(result){	    			
+	    		    var resLData = result.floorlist.leftData;
+	    		    var resRData = result.floorlist.rightData;
+	    		    var resCData = result.floorlist.centerData;	
+	    		    var idx = result.floorlist.idx;	    		   
+	    		    
+	    		    var $leftUl = $('ul.data-left-sec');
+	    		    var $rightUl = $('ul.data-right-sec');      
 
-	    		    var resLData = result.leftData;
-	    		    var resRData = result.rightData;
-	    		    var resCData = result.centerData;
+	    		    $(".data-floor").each(function(){	    		    	   		    		    		    		    		    	
+                        $(this).find("em").text(idx);                    
+	                });	            
 
-	    		    $(resLData).each(function(i){
-                        var $leftUl = $('ul.data-left-sec');                    	
-                        $leftLi = $("<li>").html(resLData[i].dept);
-                        $leftUl.append($leftLi);                       
-	                });
+		            for(var i = 0; i < resLData.length; i++) {
+		                var listEle ='';
+		                 listEle +='<li>'+resLData[i].dept;
+                		 listEle +='</li>';
+                		 $leftUl.append(listEle);   
+		            }
 
-	                $(resRData).each(function(j){
-                        var $rightUl = $('ul.data-right-sec');                    	
-                        $rightLi = $("<li>").html(resRData[j].dept);
-                        $rightUl.append($rightLi);                       
-	                });	    		   	
+		            for(var j = 0; j < resRData.length; j++) {
+		                var listEle ='';
+		                 listEle +='<li>'+resRData[j].dept;
+                		 listEle +='</li>';
+                		 $rightUl.append(listEle);   
+		            }  	
 
 	                $(resCData).each(function(v){
 	                	var $centerUl = $('ul.c_slide');           

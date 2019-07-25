@@ -1,41 +1,41 @@
 ﻿callback({
 	"leftData":[
 		{
-            "dept" : "<span>플랜트사업본부</span><span>전기계장설계팀</span><span>오만-</span><span>DUQUM REFINERY PJ</span>",
+            "dept" : "<span>플랜트사업본부</span><span>전기계장설계팀</span><span>오만-</span><span>DUQM REFINERY PJ</span>",
         }
 	],
 	"rightData":[
         {
-            "dept" : "<span>플랜트사업본부</span><span>오만-</span><span>DUQUM REFINERY PJ</span>",
+            "dept" : "<span>플랜트사업본부</span><span>오만-</span><span>DUQM REFINERY PJ</span>",
         }
 	],
 	"centerData":[
         {
-        	"url" : "intro", "time" : "5000"
+        	"url" : "1", "time" : "5000"
     	},
     	{
-        	"url" : "vision", "time" : "5000"
+        	"url" : "2", "time" : "5000"
     	},
     	{
-        	"url" : "news_1", "time" : "2000"
+        	"url" : "3", "time" : "2000"
     	},
     	{
-        	"url" : "news_2", "time" : "2000"
+        	"url" : "4", "time" : "2000"
     	},
     	{
-        	"url" : "news_3", "time" : "2000"
+        	"url" : "5", "time" : "2000"
     	},
     	{
-        	"url" : "incom_1", "time" : "5000"
+        	"url" : "6", "time" : "5000"
     	},
     	{
-        	"url" : "incom_2", "time" : "5000"
+        	"url" : "7", "time" : "5000"
     	},
     	{
-        	"url" : "message_1", "time" : "5000"
+        	"url" : "8", "time" : "5000"
     	},
     	{
-        	"url" : "message_2", "time" : "5000"
+        	"url" : "9", "time" : "5000"
     	}
 	]
 });

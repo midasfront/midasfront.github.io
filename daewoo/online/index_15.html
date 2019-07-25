@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>대우 인터넷가능</title>
+<meta http-equiv="refresh" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta http-equiv="refresh" content="10"> -->
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, width=device-width" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/common_skt.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/app.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){	
+	setInterval(todyaDate, 60000);//10min 새로고침	60000=1분
+	$.ajaxSetup({ cache: false });	
+	fnTodayWeather_cookie();
+	todyaDate();
+});
+</script>
+
+</head>
+
+<body>
+	<div id="wrap">		
+		<div class="left_sec">
+			<div class="floor_data">
+				<dl>
+					<dt class="data-floor"><em></em>F</dt>
+					<dd>
+						<ul class="data-left-sec"></ul>
+					</dd>
+				</dl>
+			</div>			
+		</div>
+		<div class="contents">
+			<div class="top_sec">
+				<div class="container" id="lay_out">
+					<div class="left_date">
+						<span class="date"><strong></strong></span> 
+						<span class="time"><em></em></span> 
+					</div>
+					<div class="weather_con">
+						<div class="now_weather" id="now_today"></div>
+					</div>
+				</div>
+			</div>
+			<div class="body_sec">
+				<div class="slide_con">
+					<ul class="c_slide"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="right_sec">
+			<div class="floor_data">
+				<dl>
+					<dt class="data-floor"><em></em>F</dt>
+					<dd>
+						<ul class="data-right-sec"></ul>
+					</dd>
+				</dl>
+			</div>				
+		</div>	
+	</div>
+
+<script>
+	(function (ns) {
+		$(function(){	
+		   ns.chkScreen.init();
+		   ns.DataLoadUI.init("15");		   
+		});
+	})(APP || {});	
+</script>
+
+</body>
+</html>

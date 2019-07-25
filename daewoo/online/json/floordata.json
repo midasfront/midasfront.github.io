@@ -1,0 +1,258 @@
+﻿callback(
+    {
+        "floorlist": {
+            "centerData":[
+                {"url" : "1", "time" : "5000"},
+                {"url" : "2", "time" : "5000"},
+                {"url" : "3", "time" : "2000"},
+                {"url" : "4", "time" : "2000"},
+                {"url" : "5", "time" : "2000"},
+                {"url" : "6", "time" : "5000"},
+                {"url" : "7", "time" : "5000"},
+                {"url" : "8", "time" : "5000"},
+                {"url" : "9", "time" : "5000"},
+                {"url" : "10", "time" : "5000"},
+                {"url" : "11", "time" : "5000"},
+                {"url" : "12", "time" : "5000"},
+                {"url" : "13", "time" : "5000"},
+                {"url" : "14", "time" : "5000"},
+                {"url" : "15", "time" : "5000"},
+                {"url" : "16", "time" : "5000"},
+                {"url" : "17", "time" : "5000"},
+                {"url" : "18", "time" : "5000"},
+                {"url" : "19", "time" : "5000"}
+            ],  
+            "lists": [                
+                {
+                    "idx": "4",      
+                    "leftData":[
+                        {"dept" : "<span>공용공간</span><span>구내식당</span><span>SUMMIT Room</span><span>CAFE</span>"}                   
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>직장 어린이집</span>"}      
+                    ]                    
+                },
+                {
+                    "idx": "5",      
+                    "leftData":[
+                        {"dept" : "<span>플랜트사업본부</span>"},
+                        {"dept" : "<span>쿠웨이트 AL-ZOUR-</span>"},
+                        {"dept" : "<span>REFINERY PJ</span><span>남제주복합화력 주기기 PJ</span><span>A1E PJ</span><span>리비아즈위티나발전PJ</span>"},
+                        {"dept" : "<span>울산 S-OIL RUC PJ</span>"},
+                        {"dept" : "<span>인사경영지원본부</span><span>비상계획팀</span><span>예비군대대</span>"},
+                        {"dept" : "<span>기술연구원장실</span><span>노동조합</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>현장준비반</span>"}      
+                    ]                    
+                },  
+                {
+                    "idx": "6",      
+                    "leftData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>전기계장설계팀</span><span>오만-</span><span>DUQM REFINERY PJ</span>"}                        
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>오만-</span><span>DUQM REFINERY PJ</span>"}      
+                    ]                    
+                }, 
+                {
+                    "idx": "7",      
+                    "leftData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>상무 전건웅</span><span>전문위원 신용경</span><span>상무보 김윤식</span>"},                       
+                        {"dept" : "<span>설계관리팀</span><span>기계설계팀</span>"}                        
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>공정설계팀</span><span>배관설계팀</span>"}      
+                    ]                    
+                }, 
+                {
+                    "idx": "8",      
+                    "leftData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>상무 김재호</span><span>전문위원 임윤호</span><span>상무보 심재구</span><span>상무보 이원길</span>"},                       
+                        {"dept" : "<span>플랜트PM1팀</span><span>플랜트PM2팀</span><span>플랜트CM팀</span><span>원자력사업팀</span>"}                        
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>전문위원 손홍걸</span>"},
+                        {"dept" : "<span>시운전팀</span><span>토건설계팀</span>"}      
+                    ]                    
+                }, 
+                {
+                    "idx": "9",      
+                    "leftData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>상무 김광호</span>"},
+                        {"dept" : "<span>상무 조순범</span><span>상무 최일영</span><span>상무보 장재우</span><span>상무보 홍민표</span>"},
+                        {"dept" : "<span>플랜트기획팀</span><span>플랜트사업1팀</span> <span>플랜트사업2팀</span><span>LNG사업TFT</span>"}                        
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>플랜트사업본부</span><span>상무보 허윤종</span><span>상무보 최해영</span>"},
+                        {"dept" : "<span>플랜트견적1팀</span><span>플랜트견적2팀</span>"}      
+                    ]                    
+                },            
+                {
+                    "idx": "10",      
+                    "leftData":[
+                        {"dept" : "<span>품질안전실</span><span>상무 이호진</span>"},
+                        {"dept" : "<span>상무보 이광채</span><span>상무보 김용선</span>"},
+                        {"dept" : "<span>국내HSE팀</span><span>해외HSE팀</span><span>품질경영팀</span><span>품질기술팀</span><span>CLEAR TFT</span>"}                       
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>토목사업본부</span><span>상무 김태영</span><span>상무보 윤익수</span><span>상무보 김토문</span><span>상무보 강민구</span>"},
+                        {"dept" : "<span>토목사업팀</span><span>토목개발팀</span><span>토목환경사업팀</span><span>토목견적팀</span>"}        
+                    ]                    
+                },
+                {
+                    "idx": "11",      
+                    "leftData":[
+                        {"dept" : "<span>토목사업본부</span><span>전무 김형섭</span>"},
+                        {"dept" : "<span>상무 박찬용</span><span>상무보 김제춘</span>"},
+                        {"dept" : "<span>토목기획팀</span><span>토목기술팀</span><span>국내토목CM팀</span>"}                       
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>토목사업본부</span>"},
+                        {"dept" : "<span>상무 장승규</span><span>상무보 정태성</span><span>상무보 김용해</span><span>상무보 강석도</span>"},      
+                        {"dept" : "<span>해외토목사업1팀</span><span>해외토목사업2팀</span><span>해외토목CM팀</span>"}        
+                    ]                    
+                },
+                {
+                    "idx": "12",      
+                    "leftData":[
+                        {"dept" : "<span>커뮤니케이션 센터</span><span>대회의실</span><span>강의실</span><span>화상회의실 1~4</span>"},
+                        {"dept" : "<span>TF룸</span>"},
+                        {"dept" : "<span>현장준비반</span>"}                         
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>커뮤니케이션 센터</span><span>대회의실</span><span>Lounge</span><span>Cafe</span>"},
+                        {"dept" : "<span>의무실</span><span>心CARE CENTER</span>"},
+                        {"dept" : "<span>건설기술정보센터</span"},
+                        {"dept" : "<span>여직원휴게실</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "13",      
+                    "leftData":[
+                        {"dept" : "<span>주택건축사업본부</span><span>상무 곽은상</span><span>상무보 전윤영</span><span>상무보 최영욱</span><span>상무보 박용하</span>"},
+                        {"dept" : "<span>도시정비사업1팀</span><span>도시정비사업2팀</span><span>도시정비사업3팀</span>"},
+                        {"dept" : "<span>마케팅팀</span><span>영업관리팀</span>"}                         
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>주택건축사업본부</span><span>상무 곽병영</span><span>상무보 박희석</span><span>상무보 조학연</span>"},
+                        {"dept" : "<span>주택건축사업1팀</span><span>주택건축사업2팀</span><span>주택건축사업3팀</span><span>개발사업1팀</span><span>개발사업2팀</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "14",      
+                    "leftData":[
+                        {"dept" : "<span>주택건축사업본부</span><span>상무 권혁건</span><span>상무 조석민</span><span>상무보 강주석</span><span>상무보 유영삼</span>"},
+                        {"dept" : "<span>해외건축사업1팀</span><span>해외건축사업2팀</span>"},
+                        {"dept" : "<span>수주견적팀</span><span>예산견적팀</span><span>프리콘TFT</span>"}                         
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>주택건축사업본부</span><span>전무 백정완</span>"},
+                        {"dept" : "<span>상무 정영수</span><span>상무 이경구</span><span>상무 김중회</span><span>상무보 김선근</span><span>상무보 이항녕</span><span>상무보 오성규</span><span>상무보 권오길</span><span>상무보 김진형</span>"},
+                        {"dept" : "<span>주택건축기획팀</span><span>주택건축CM1팀</span><span>주택건축CM2팀</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "15",      
+                    "leftData":[
+                        {"dept" : "<span>인사경영지원본부</span><span>상무보 이용권</span>"},
+                        {"dept" : "<span>IT기획팀</span><span>IT운영팀</span>"},
+                        {"dept" : "<span>PC수리실</span>"}                         
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>주택건축사업본부</span><span>상무보 안상태</span><span>상무보 김용</span><span>상무보 윤주송</span>"},
+                        {"dept" : "<span>주택건축설계팀</span><span>상품개발팀</span><span>주택건축기술팀</span><span>주택건축기계팀</span><span>주택건축전기팀</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "16",      
+                    "leftData":[
+                        {"dept" : "<span>경영관리단</span><span>단장 이병인</span>"},
+                        {"dept" : "<span>인사경영지원본부</span><span>상무 진재기</span><span>상무보 박석훈</span>"},
+                        {"dept" : "<span>글로벌지원팀</span><span>커뮤니케이션팀</span>"}                         
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>인사경영지원본부</span><span>상무 박상훈</span>"},
+                        {"dept" : "<span>상무보 강기남</span><span>상무보 지국일</span>"},
+                        {"dept" : "<span>총무팀</span>현장경영지원팀<span>인사팀</span><span>인재육성팀</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "17",      
+                    "leftData":[
+                        {"dept" : "<span>조달본부</span><span>상무 윤우규</span><span>상무보 홍상범</span><span>상무보 이승표</span>"},
+                        {"dept" : "<span>플랜트구매1팀</span><span>플랜트구매2팀</span><span>플랜트구매3팀</span><span>자재물류관리팀</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>조달본부</span><span>상무 김성환</span>"},
+                        {"dept" : "<span>상무보 진행원</span><span>상무보 임효선</span>"},
+                        {"dept" : "<span>상생기획팀</span><span>국내외주1팀</span><span>국내외주2팀</span><span>해외외주팀</span><span>건설기계팀</span>"},
+                        {"dept" : "<span>일반구매1팀</span><span>일반구매2팀</span>"},
+                        {"dept" : "<span>직원노사협의회</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "18",      
+                    "leftData":[
+                        {"dept" : "<span>재무관리본부</span><span>상무보 이용희</span><span>상무보 박성문</span>"},
+                        {"dept" : "<span>회계팀</span><span>세무팀</span><span>내부회계관리팀</span><span>국제금융팀</span><span>자금팀</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>CFO</span><span>전무 김창환</span>"},
+                        {"dept" : "<span>재무관리본부</span><span>전무 조인환</span>"},
+                        {"dept" : "<span>상무 최종일</span><span>상무보 김낭규</span><span>상무보 김대식</span><span>상무보 정호명</span>"},
+                        {"dept" : "<span>IR팀</span><span>경영관리팀</span><span>예산관리팀</span><span>자산관리팀</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "19",      
+                    "leftData":[
+                        {"dept" : "<span>전략기획본부</span><span>상무 서정철</span><span>상무보 양성민</span>"},
+                        {"dept" : "<span>공공업무팀</span><span>북방사업지원팀</span><span>CR팀</span>"},
+                        {"dept" : "<span>해외영업관리팀</span><span>해외마케팅팀</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>기업가치제고본부</span><span>상무 임판섭</span><span>상무 홍순범</span><span>상무보 박도선</span>"},
+                        {"dept" : "<span>기업가치제고기획팀</span><span>기업가치제고1팀</span><span>기업가치제고2팀</span>"},
+                        {"dept" : "<span>해외PJ심의팀</span><span>국내PJ심의팀</span>"},
+                        {"dept" : "<span>감사실</span><span>상무 오광석</span>"},
+                        {"dept" : "<span>기획진단팀</span><span>직무진단팀</span><span>컴플라이언스팀</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "20",      
+                    "leftData":[
+                        {"dept" : "<span>전략기획본부</span><span>전무 조성진</span>"},
+                        {"dept" : "<span>상무 임기영</span><span>상무 한  승</span><span>상무보 주영선</span><span>상무보 최선호</span>"},
+                        {"dept" : "<span>전략기획팀</span><span>미래전략팀</span><span>투자관리팀</span><span>해외인프라개발팀</span><span>신사업개발팀</span>"},
+                        {"dept" : "<span>법무1팀</span><span>법무2팀</span><span>해외법무팀</span>"},
+                        {"dept" : "<span>PR Room</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>Board Room</span><span>이사회 회의실</span>"}        
+                    ]                    
+                },
+                {
+                    "idx": "east",      
+                    "leftData":[],
+                    "rightData":[
+                        {"dept" : "<span>인사경영지원본부</span><span>상무보 박석훈</span><span>홍보팀</span><span>기자실</span><span>재무관리본부</span>"},
+                        {"dept" : "<span>IR Room</span><span>회계수감실</span>"}
+                    ]                    
+                },
+                {
+                    "idx": "elevator",      
+                    "leftData":null,
+                    "rightData":null         
+                }
+            ]
+        }
+    }
+);
+
+
+
+
+
+
+

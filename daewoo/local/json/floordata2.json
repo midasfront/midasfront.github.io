@@ -1,0 +1,50 @@
+﻿callback(
+    {
+        "floorlist": {
+            "centerData":[
+                {"url" : "1", "time" : "5000"},
+                {"url" : "2", "time" : "5000"},
+                {"url" : "3", "time" : "2000"},
+                {"url" : "4", "time" : "2000"},
+                {"url" : "5", "time" : "2000"},
+                {"url" : "6", "time" : "5000"},
+                {"url" : "7", "time" : "5000"},
+                {"url" : "8", "time" : "5000"},
+                {"url" : "9", "time" : "5000"}
+            ],  
+            "lists": [
+                {
+                    "idx": "20",      
+                    "leftData":[
+                        {"dept" : "<span>전략기획본부</span><span>전무 조성진</span>"},
+                        {"dept" : "<span>상무 임기영</span><span>상무 한  승</span><span>상무보 주영선</span><span>상무보 최선호</span>"},
+                        {"dept" : "<span>전략기획팀</span><span>미래전략팀</span><span>투자관리팀</span><span>해외인프라개발팀</span><span>신사업개발팀</span>"},
+                        {"dept" : "<span>법무1팀</span><span>법무2팀</span><span>해외법무팀</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>Board Room</span><span>사외이사회의실</span>"}        
+                    ]                    
+                },
+                {
+                    "idx": "21",      
+                    "leftData":[
+                        {"dept" : "<span>전략기획본부11</span><span>전무 조성진</span>"},
+                        {"dept" : "<span>상무 임기영</span><span>상무 한  승</span><span>상무보 주영선</span><span>상무보 최선호</span>"},
+                        {"dept" : "<span>전략기획팀</span><span>미래전략팀</span><span>투자관리팀</span><span>해외인프라개발팀</span><span>신사업개발팀</span>"},
+                        {"dept" : "<span>법무1팀</span><span>법무2팀</span><span>해외법무팀</span>"}
+                    ],
+                    "rightData":[
+                        {"dept" : "<span>Board Room</span><span>사외이사회의실</span>"}        
+                    ]
+                }
+            ]
+        }
+    }
+);
+
+
+
+
+
+
+
