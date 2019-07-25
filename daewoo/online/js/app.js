@@ -72,6 +72,9 @@ if(browser.toLowerCase().indexOf("msie 8")>0 || browser.toLowerCase().indexOf("m
           thisFloor = ele;
           $(".data-floor").each(function(){                                                           
               $(this).find("em").text(thisFloor);                    
+              if (thisFloor == "east") {
+                $(this).find("em").text("7");
+              }
           });
           dataLoad();  
       };     
